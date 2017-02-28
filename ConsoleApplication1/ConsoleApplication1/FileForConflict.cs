@@ -8,6 +8,6 @@ namespace ConsoleApplication1
 {
     class FileForConflict
     {
-        string message = "Something to display!";
+        string message = "Something to display fo generating error!";
     }
 }
