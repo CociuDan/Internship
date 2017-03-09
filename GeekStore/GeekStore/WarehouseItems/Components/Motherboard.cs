@@ -19,48 +19,37 @@ namespace GeekStore.WarehouseItems.Components
             try
             {
                 if (string.IsNullOrEmpty(chipset) || string.IsNullOrWhiteSpace(chipset))
-                {
                     throw new ArgumentNullException(chipset);
-                }
-                else if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
+
+                if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
                     throw new ArgumentNullException(manufacturer);
-                }
-                else if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
+
+                if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
                     throw new ArgumentNullException(model);
-                }
-                else if (pcieSlots <= 1)
-                {
+
+                if (pcieSlots <= 1)
                     throw new ArgumentException("Motherboard cannot have less than one PCI-E slot. Entered value: " + pcieSlots);
-                }
-                else if (price <= 0)
-                {
+
+                if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                }
-                else if (quantity <= 0)
-                {
+
+                if (quantity <= 0)
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-                }
-                else if(ramSlots <= 0)
-                {
+
+                if (ramSlots <= 0)
                     throw new ArgumentException("Motherboard cannot have less than one RAM slot. Entered value: " + ramSlots);
-                }
-                else if (string.IsNullOrEmpty(socket) || string.IsNullOrWhiteSpace(socket))
-                {
+
+                if (string.IsNullOrEmpty(socket) || string.IsNullOrWhiteSpace(socket))
                     throw new ArgumentNullException(socket);
-                }
-                else
-                {
-                    _chipset = chipset;
-                    _manufacturer = manufacturer;
-                    _model = model;
-                    _pcieSlots = pcieSlots;
-                    _price = price;
-                    _quantity = quantity;
-                    _ramSlots = ramSlots;
-                    _socket = socket;
-                }
+
+                _chipset = chipset;
+                _manufacturer = manufacturer;
+                _model = model;
+                _pcieSlots = pcieSlots;
+                _price = price;
+                _quantity = quantity;
+                _ramSlots = ramSlots;
+                _socket = socket;
             }
             catch (ArgumentNullException exception)
             {
@@ -81,12 +70,12 @@ namespace GeekStore.WarehouseItems.Components
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("\tManufacturer: " + _manufacturer);
-                sb.AppendLine("\tModel: " + _model);
-                sb.AppendLine("\tChipset: " + _chipset);
-                sb.AppendLine("\tSocket: " + _socket);
-                sb.AppendLine("\tPCI-E Slots: " + _pcieSlots);
-                sb.AppendLine("\tRAM Slots: " + _ramSlots);
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: {_model}");
+                sb.AppendLine($"\tChipset: {_chipset}");
+                sb.AppendLine($"\tSocket: {_socket}");
+                sb.AppendLine($"\tPCI-E Slots: {_pcieSlots}");
+                sb.AppendLine($"\tRAM Slots: {_ramSlots}");
                 return sb.ToString();
             }
         }

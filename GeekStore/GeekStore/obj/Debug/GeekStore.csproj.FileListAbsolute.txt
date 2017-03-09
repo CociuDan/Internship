@@ -4,3 +4,9 @@ C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekSto
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.exe
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.pdb
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.csprojResolveAssemblyReference.cache
+C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.exe.config
+C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.pdb
+C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.csprojResolveAssemblyReference.cache
+C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.exe
+C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.pdb
+C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.exe

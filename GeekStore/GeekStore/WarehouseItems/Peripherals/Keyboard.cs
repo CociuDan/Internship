@@ -18,21 +18,17 @@ namespace GeekStore.WarehouseItems.Peripherals
             try
             {
                 if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
                     throw new ArgumentNullException(manufacturer);
-                }
+
                 if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
                     throw new ArgumentNullException(model);
-                }
+
                 if (price <= 0)
-                {
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                }
+
                 if (quantity <= 0)
-                {
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-                }
+
                 _backLight = backLight;
                 _manufacturer = manufacturer;
                 _model = model;
@@ -59,10 +55,10 @@ namespace GeekStore.WarehouseItems.Peripherals
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("\tManufacturer: " + _manufacturer);
-                sb.AppendLine("\tModel: " + _model);
-                sb.AppendLine("\tBacklight: " + _backLight);
-                sb.AppendLine("\tType: " + _type);
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: {_model}");
+                sb.AppendLine($"\tBacklight: {_backLight}");
+                sb.AppendLine($"\tType: {_type}");
                 return sb.ToString();
             }
         }

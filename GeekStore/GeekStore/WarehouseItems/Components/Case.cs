@@ -17,21 +17,17 @@ namespace GeekStore.WarehouseItems.Components
             try
             {
                 if(string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
                     throw new ArgumentNullException(manufacturer);
-                }
+
                 if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
                     throw new ArgumentNullException(model);
-                }
+
                 if (price <= 0)
-                {
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                }
+
                 if (quantity <= 0)
-                {
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-                }
+
                     _formFactor = formFactor.ToString();
                     _manufacturer = manufacturer;
                     _model = model;
@@ -57,9 +53,9 @@ namespace GeekStore.WarehouseItems.Components
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("\tManufacturer: " + _manufacturer);
-                sb.AppendLine("\tModel: " + _model);
-                sb.AppendLine("\tForm Factor: " + _formFactor);
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: {_model}");
+                sb.AppendLine($"\tForm Factor: {_formFactor}");
                 return sb.ToString();
             }
         }

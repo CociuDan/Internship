@@ -6,70 +6,47 @@ namespace GeekStore.WarehouseItems.PCs
 {
     class Laptop : IItem, IComputer
     {
-        private readonly string _cpu;
-        private readonly string _ram;
-        private readonly string _gpu;
-        private readonly string _drive;
+        private readonly CPU _cpu;
+        private readonly Display _display;
+        private readonly Disk _drive;
+        private readonly GPU _gpu;
         private readonly string _manufacturer;
         private readonly string _model;
         private double _price;
         private int _quantity;
+        private readonly RAM _ram;
 
-        public Laptop(CPU.CPUManufacturers cpuManufacturer, string cpuModel, int cpuCores, int cpuThreads, double cpuBaseFrequency, double cpuBoostFrequency, int ramCapacity,
-                      RAM.RAMGeneration ramGeneration, string gpuModel, int gpuCapacity, Disk.DiskType diskType, int diskCapacity, string manufacturer, string model)
+        public Laptop(LaptopCPU cpu, LaptopDisplay display, Disk drive, GPU gpu, string manufacturer, string model, double price, int quantity, RAM ram)
         {
             try
             {
-                if(string.IsNullOrEmpty(cpuModel) || string.IsNullOrWhiteSpace(cpuModel))
-                {
-                    throw new ArgumentNullException(cpuModel);
-                }
-                if (cpuCores != 1 && cpuCores != 2 && cpuCores != 3 && cpuCores != 4 && cpuCores != 6 && cpuCores != 8 && cpuCores != 10)
-                {
-                    throw new ArgumentException("Number of cores entered is invalid. Entered value: " + cpuCores.ToString());
-                }
-                if (cpuThreads != cpuCores && cpuThreads != (cpuCores * 2))
-                {
-                    throw new ArgumentException("Number of Threads have to be equal or double of number of cores. Entered value: " + cpuThreads.ToString() + ". Number of cores entered: " + cpuCores.ToString());
-                }
-                if (cpuBaseFrequency <= 0)
-                {
-                    throw new ArgumentException("CPU Base Frequency cannot be less than 0. Entered value: " + cpuBaseFrequency.ToString());
-                }
-                if (cpuBoostFrequency < cpuBaseFrequency)
-                {
-                    throw new ArgumentException("CPU Boost Frequency cannot be less than Base Frequency. Entered value: " + cpuBoostFrequency.ToString());
-                }
-                if (ramCapacity != 512 && ramCapacity != 1024 && ramCapacity != 2048 && ramCapacity != 4096 && ramCapacity != 8192 && ramCapacity != 16384)
-                {
-                    throw new ArgumentException("RAM Capacity cannot be less than 512MB and higher than 16GB(16384MB). Entered value: " + ramCapacity.ToString());
-                }
-                if (string.IsNullOrEmpty(gpuModel) || string.IsNullOrWhiteSpace(gpuModel))
-                {
-                    throw new ArgumentNullException(gpuModel);
-                }
-                if (gpuCapacity <= 0 || gpuCapacity % 2 != 0)
-                {
-                    throw new ArgumentException("GPU Capacity cannot be less or equal to 0 or not divided by 2. Entered value: " + gpuCapacity);
-                }
-                if (diskCapacity <= 0)
-                {
-                    throw new ArgumentException("Disk Capacity cannot be less or equal to 0. Entered value: " + diskCapacity.ToString());
-                }
+                if (cpu == null)
+                    throw new ArgumentNullException("cpu");
+                if (display == null)
+                    throw new ArgumentNullException("display");
+                if (drive == null)
+                    throw new ArgumentNullException("drive");
+                if (gpu == null)
+                    throw new ArgumentNullException("gpu");
                 if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
-                    throw new ArgumentNullException(manufacturer);
-                }
+                    throw new ArgumentNullException("manufacturer");
                 if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
-                    throw new ArgumentNullException(model);
-                }
-                _cpu = string.Format("{0} {1} {2}/{3} @{4}-{5}", cpuManufacturer.ToString(), cpuModel, cpuCores, cpuThreads, cpuBaseFrequency, cpuBoostFrequency);
-                _ram = string.Format("{0} {1}", ramCapacity, ramGeneration.ToString());
-                _gpu = string.Format("{0} {1}", gpuModel, gpuCapacity);
-                _drive = string.Format("{0} {1}", diskCapacity, diskType);
+                    throw new ArgumentNullException("model");
+                if (price < 0)
+                    throw new ArgumentException("Laptop price cannot be less than 0. Entered value: " + price);
+                if (quantity < 0)
+                    throw new ArgumentException("Laptop quantity cannot be less than 0. Entered value: " + quantity);
+                if (ram == null)
+                    throw new ArgumentNullException("ram");
+                _cpu = cpu;
+                _display = display;
+                _drive = drive;
+                _gpu = gpu;
                 _manufacturer = manufacturer;
                 _model = model;
+                _price = price;
+                _quantity = quantity;
+                _ram = ram;
             }
             catch (ArgumentNullException exception)
             {
@@ -82,29 +59,32 @@ namespace GeekStore.WarehouseItems.PCs
             catch (Exception exception)
             {
                 throw exception;
-            }
-        }
+            }            
+        }        
 
         public string Description
         {
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("Manufacturer: " + _manufacturer);
-                sb.AppendLine("Model: " + _model);
-                sb.AppendLine("CPU: " + _cpu);
-                sb.AppendLine("RAM: " + _ram);
-                sb.AppendLine("GPU: " + _gpu);
-                sb.AppendLine("Drive: " + _drive);
+                sb.AppendLine($"Manufacturer: {_manufacturer}");
+                sb.AppendLine($"Model: { _model} ");
+                sb.AppendLine($"CPU: {_cpu.ToString()}");
+                sb.AppendLine($"RAM: {_ram.Capacity}MB {_ram.Generation} {_ram.Frequency}Mhz");
+                sb.AppendLine($"GPU: {_gpu.ToString()}");
+                sb.AppendLine($"Drive: {_drive.Capacity} {_drive.Type}");
+                sb.AppendLine($"Display: {_display.AspectRatio} {_display.Resolution} @ {_display.MaxRefreshRate}Hz");
                 return sb.ToString();
             }
         }
 
-        public string CPU { get { return _cpu; } }
+        public CPU CPU { get { return _cpu; } }
 
-        public string Drive { get { return _drive; } }
+        public Display Display { get { return _display; } }
 
-        public string GPU { get { return _gpu; } }
+        public Disk Drive { get { return _drive; } }
+
+        public GPU GPU { get { return _gpu; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 
@@ -114,7 +94,7 @@ namespace GeekStore.WarehouseItems.PCs
 
         public int Quantity { get { return _quantity; } }
 
-        public string RAM { get { return _ram; } }
+        public RAM RAM { get { return _ram; } }
 
         public void AddToWarehouse(int incomingQuantity)
         {

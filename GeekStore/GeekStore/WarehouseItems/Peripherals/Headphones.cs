@@ -19,29 +19,23 @@ namespace GeekStore.WarehouseItems.Peripherals
             try
             {
                 if (impendance <= 0)
-                {
                     throw new ArgumentException("Headphones Impendance cannot be less or equal to 0. Entered value: " + impendance.ToString());
-                }
+
                 if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
                     throw new ArgumentNullException(manufacturer);
-                }
+
                 if (maxVolume <= 0)
-                {
                     throw new ArgumentException("Speakers Max Volume cannot be less or equal than 0 Db. Entered value: " + maxVolume.ToString());
-                }
+
                 if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
                     throw new ArgumentNullException(model);
-                }
+
                 if (price <= 0)
-                {
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                }
+
                 if (quantity <= 0)
-                {
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-                }
+
                 _manufacturer = manufacturer;
                 _maxVolume = maxVolume;
                 _model = model;
@@ -73,10 +67,10 @@ namespace GeekStore.WarehouseItems.Peripherals
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("\tManufacturer: " + _manufacturer);
-                sb.AppendLine("\tModel: " + _model);
-                sb.AppendLine("\tType: " + _type);
-                sb.AppendLine("\tImpendance: " + _impendance + "Ω");
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: {_model}");
+                sb.AppendLine($"\tType: {_type}");
+                sb.AppendLine($"\tImpendance: {_impendance}Ω");
                 return sb.ToString();
             }
         }
@@ -97,6 +91,7 @@ namespace GeekStore.WarehouseItems.Peripherals
         {
             _quantity += incomingQuantity;
         }
+
         public void SellQuantity(int sellingQuantity)
         {
             _quantity -= sellingQuantity;

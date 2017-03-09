@@ -16,31 +16,28 @@ namespace GeekStore.WarehouseItems.Peripherals
         {
             try
             {
-                if (configuration != "1.0" && configuration != "2.0" && configuration != "2.1" && configuration != "3.1" && configuration != "4.0" && configuration != "4.1" && configuration != "5.1" && configuration != "6.1" && configuration != "7.1")
-                {
+                if (configuration != "1.0" && configuration != "2.0" && configuration != "2.1" && configuration != "3.1" && configuration != "4.0"
+                    && configuration != "4.1" && configuration != "5.1" && configuration != "6.1" && configuration != "7.1")
                     throw new ArgumentException("Speakers unkown configuration. Entered value: " + configuration.ToString());
-                }
+
                 if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
                     throw new ArgumentNullException(manufacturer);
-                }
-                if(maxVolume <= 0)
-                {
+
+                if (maxVolume <= 0)
                     throw new ArgumentException("Speakers Max Volume cannot be less or equal than 0 Db. Entered value: " + maxVolume.ToString());
-                }
+
                 if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
                     throw new ArgumentNullException(model);
-                }
+
                 if (price <= 0)
-                {
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                }
+
                 if (quantity <= 0)
-                {
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-                }
+
+                _configuration = configuration;
                 _manufacturer = manufacturer;
+                _maxVolume = maxVolume;
                 _model = model;
                 _price = price;
                 _quantity = quantity;
@@ -65,10 +62,10 @@ namespace GeekStore.WarehouseItems.Peripherals
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("\tManufacturer: " + _manufacturer);
-                sb.AppendLine("\tModel: " + _model);
-                sb.AppendLine("\tConfiguration: " + _configuration);
-                sb.AppendLine("\tMax Volume: " + _maxVolume + "Db");
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: {_model}");
+                sb.AppendLine($"\tConfiguration: {_configuration}");
+                sb.AppendLine($"\tMax Volume: {_maxVolume}Db");
                 return sb.ToString();
             }
         }
@@ -89,6 +86,7 @@ namespace GeekStore.WarehouseItems.Peripherals
         {
             _quantity += incomingQuantity;
         }
+
         public void SellQuantity(int sellingQuantity)
         {
             _quantity -= sellingQuantity;

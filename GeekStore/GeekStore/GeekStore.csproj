@@ -46,12 +46,17 @@
     <Compile Include="WarehouseItems\Components\Case.cs" />
     <Compile Include="WarehouseItems\Components\Cooler.cs" />
     <Compile Include="WarehouseItems\Components\DesktopCPU.cs" />
-    <Compile Include="WarehouseItems\CPU.cs" />
-    <Compile Include="WarehouseItems\PCs\DesktopPC.cs" />
-    <Compile Include="WarehouseItems\Components\Disk.cs" />
-    <Compile Include="WarehouseItems\IComputer.cs" />
-    <Compile Include="WarehouseItems\Peripherals\Display.cs" />
+    <Compile Include="WarehouseItems\Components\CPU.cs" />
+    <Compile Include="WarehouseItems\Components\Display.cs" />
     <Compile Include="WarehouseItems\Components\GPU.cs" />
+    <Compile Include="WarehouseItems\Components\LaptopCPU.cs" />
+    <Compile Include="WarehouseItems\Components\LaptopDisplay.cs" />
+    <Compile Include="WarehouseItems\Components\LaptopGPU.cs" />
+    <Compile Include="WarehouseItems\PCs\Desktop.cs" />
+    <Compile Include="WarehouseItems\Components\Disk.cs" />
+    <Compile Include="WarehouseItems\PCs\IComputer.cs" />
+    <Compile Include="WarehouseItems\Peripherals\Monitor.cs" />
+    <Compile Include="WarehouseItems\Components\DesktopGPU.cs" />
     <Compile Include="WarehouseItems\IItem.cs" />
     <Compile Include="WarehouseItems\Peripherals\Headphones.cs" />
     <Compile Include="WarehouseItems\Peripherals\Keyboard.cs" />
@@ -66,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

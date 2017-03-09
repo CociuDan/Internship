@@ -1,30 +1,22 @@
 ﻿using System;
 using System.Text;
 
-namespace GeekStore.WarehouseItems.Peripherals
+namespace GeekStore.WarehouseItems.Components
 {
-    class Mouse : IItem
+    class DesktopGPU : GPU, IItem
     {
-        public enum MouseType { Optical, Laser, Mechanical }
-        private readonly int _dpi;
-        private readonly string _manufacturer;
-        private readonly string _model;
+        private readonly string _architecture;
         private double _price;
         private int _quantity;
-        private readonly string _type;
+        private readonly int _tdp;
 
-        public Mouse(int dpi, string manufacturer, string model, double price, int quantity, MouseType type)
+        public DesktopGPU(string architecture, int interfaceWidth, string manufacturer, string memoryInterface, string model, double price, int quantity, int tdp, int vram)
+                   : base(interfaceWidth, manufacturer, memoryInterface, model, vram)
         {
             try
             {
-                if (dpi <= 0)
-                    throw new ArgumentException("Mouse cannot have a DPI less or equal to 0. Entered value: " + dpi.ToString());
-
-                if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                    throw new ArgumentNullException(manufacturer);
-
-                if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                    throw new ArgumentNullException(model);
+                if (string.IsNullOrEmpty(architecture) || string.IsNullOrWhiteSpace(architecture))
+                    throw new ArgumentNullException(architecture);
 
                 if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
@@ -32,13 +24,13 @@ namespace GeekStore.WarehouseItems.Peripherals
                 if (quantity <= 0)
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
 
-                _dpi = dpi;
-                _manufacturer = manufacturer;
-                _model = model;
+                if (tdp <= 0)
+                    throw new ArgumentException("TDP cannot be less or equal to 0. Entered value: " + tdp.ToString());
+
+                _architecture = architecture;
                 _price = price;
                 _quantity = quantity;
-                _type = type.ToString();
-
+                _tdp = tdp;
             }
             catch (ArgumentNullException exception)
             {
@@ -52,7 +44,6 @@ namespace GeekStore.WarehouseItems.Peripherals
             {
                 throw exception;
             }
-
         }
 
         public string Description
@@ -60,25 +51,25 @@ namespace GeekStore.WarehouseItems.Peripherals
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine($"\tManufacturer: {_manufacturer}");
-                sb.AppendLine($"\tModel: {_model}");
-                sb.AppendLine($"\tDPI: {_dpi}");
-                sb.AppendLine($"\tType: {_type}");
+                sb.AppendLine($"\tManufacturer: {Manufacturer}");
+                sb.AppendLine($"\tModel: {Model}");
+                sb.AppendLine($"\tArchitecture: {_architecture}");
+                sb.AppendLine($"\tInterface Width: {InterfaceWidth}bit");
+                sb.AppendLine($"\tMemory Interface: {MemoryInterface}");
+                sb.AppendLine($"\tVRAM: {Vram}GB");
+                sb.AppendLine($"\tTDP: {_tdp}W");
                 return sb.ToString();
             }
         }
 
-        public int Dpi { get { return _dpi; } }
-
-        public string Manufacturer { get { return _manufacturer; } }
-
-        public string Model { get { return _model; } }
+        public string Architecture { get { return _architecture; } }
 
         public double Price { get { return _price; } }
 
         public int Quantity { get { return _quantity; } }
 
-        public string Type { get { return _type; } }
+        public int Tdp { get { return _tdp; } }
+
 
         public void AddToWarehouse(int incomingQuantity)
         {

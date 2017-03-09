@@ -17,35 +17,29 @@ namespace GeekStore.WarehouseItems.Components
             try
             {
                 if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                {
                     throw new ArgumentNullException(manufacturer);
-                }
+
                 if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                {
                     throw new ArgumentNullException(model);
-                }
+
                 if (price <= 0)
-                {
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                }
+
                 if (quantity <= 0)
-                {
                     throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-                }
+
                 if (string.IsNullOrEmpty(socket) || string.IsNullOrWhiteSpace(socket))
-                {
                     throw new ArgumentNullException(socket);
-                }
+
                 if (maxTdp <= 0)
-                {
                     throw new ArgumentException("MaxTDP is less or equal to 0. Entered value: " + maxTdp.ToString());
-                }
-                    _manufacturer = manufacturer;
-                    _model = model;
-                    _price = price;
-                    _quantity = quantity;
-                    _socket = socket;
-                    _maxTdp = maxTdp;
+
+                _manufacturer = manufacturer;
+                _model = model;
+                _price = price;
+                _quantity = quantity;
+                _socket = socket;
+                _maxTdp = maxTdp;
             }
             catch (ArgumentNullException exception)
             {
@@ -55,7 +49,7 @@ namespace GeekStore.WarehouseItems.Components
             {
                 throw exception;
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -66,10 +60,10 @@ namespace GeekStore.WarehouseItems.Components
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("\tManufacturer: " + _manufacturer);
-                sb.AppendLine("\tModel: " + _model);
-                sb.AppendLine("\tSocket: " + _socket);
-                sb.AppendLine("\tMax TDP: " + _maxTdp + "w");
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: {_model}");
+                sb.AppendLine($"\tSocket: {_socket}");
+                sb.AppendLine($"\tMax TDP: {_maxTdp}W");
                 return sb.ToString();
             }
         }
