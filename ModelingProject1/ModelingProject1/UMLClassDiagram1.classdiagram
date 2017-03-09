@@ -1,0 +1,1739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a6aec8a0-26ba-455f-b9ba-0238c72f7018" name="UMLClassDiagram1" linkedPackageId="d5eff10a-6e24-404a-bb9e-330e1c369c12" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7a9e67db-a307-4cb5-aeef-1b26e5f74261" name="Warehouse">
+        <elementDefinition Id="b11e81a8-06a3-4b5b-9957-d401fc8927d6" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="51d40a8a-2ea4-4d58-a4d4-456c392410e6" name="Mouse" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0020c905-beda-441d-9892-233855ffae5c" />
+              <ownedAttributesInternal>
+                <property Id="3c396e3f-1514-4133-bd82-8f7d258ccdd9" name="Type" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b773caf-e139-4ea4-8cd9-c3a004a6e08e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bce2bffd-f1f4-4ab4-89dd-72d467967816" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2a02956a-4e90-4091-b2d2-d8b2e1261f31" name="DPI" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3475b83-45e7-46b9-abda-20b44b24c887" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9f11f9cb-1809-4cff-a351-33784f02c9d0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="63277479-5021-474e-92c0-ea9506233d74" name="Track" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b0e781d8-2075-4b68-8413-b7e3cc13124d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3120d6f7-50b4-4de5-ac19-82e5f34d6ed7" direction="Return" isUnique="false">
+                        <elementDefinition Id="3225f2b4-64c0-404e-a3fe-21a389bbb53c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="d498f501-44f5-4349-a8f4-0ecb42905a82" name="Keyboard" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c31bf83e-5652-49dd-aa6e-36d8c230c331" />
+              <ownedAttributesInternal>
+                <property Id="ea4f8e64-6150-4f5b-9956-b6c33e070607" name="Type" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cb3d0937-0d2f-41bc-9502-282453ba931c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="dbac2582-e5c5-49c4-b31c-19f99c9efa53" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c1d07520-7725-4a4d-8309-c4ec5d946b2f" name="Backlight" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a578dd1f-7a29-4028-9b6d-a8972e74704c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9befc1aa-2f53-4423-8284-a49262d63ed2" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="192996b0-efda-4dcc-a0b9-3baaea5ea722" name="InsertCharacters" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="480eea44-cdf6-408e-af9e-35aa6eded095" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6851188b-e6ac-4142-8fc3-decc8f1a51c9" direction="Return" isUnique="false">
+                        <elementDefinition Id="f9374b48-b320-47e5-82db-b88985d5366a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="9d6b2579-ba7d-4f9b-9b7f-c70aaae1181c" name="CPU" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="41433b70-8ae2-46d3-b3bd-82fa7b4bc5bd" />
+              <ownedAttributesInternal>
+                <property Id="6d879a9e-94b6-4588-9de0-60d607b5b233" name="Cores" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ce753f13-8e1e-4e82-8528-df357531fcef" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="dd778965-ab87-46dc-898e-d524d0563b8b" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="61b4071b-d75c-4752-9e06-46be73c1a247" name="Threads" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d5b0d8d-5829-411d-9ac3-6989797aa831" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="846211a3-272c-4fd2-81e9-f2c20a29e5ca" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="d5d5dcce-4ae0-4ef0-b288-b08c10c0bdae" name="Base Frequency" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1d714ff7-8841-4eff-be3b-18d06f16f00a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="84093966-213f-45a9-9657-2b1e21e6bf1d" LastKnownName="Float" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1ffacc6a-c8d2-4cbb-93b9-cae71162eaf5" name="Boost Frequency" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94e5add9-3642-49d2-b13e-a12d05eaa88d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7890b7ef-dad7-4c99-822d-49cbb1dd9d3a" LastKnownName="Float" />
+                  </type_NamedElement>
+                </property>
+                <property Id="88c70da2-8c98-4466-967c-b818bf0f5c98" name="TDP" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="92c10a58-eabc-4f0b-af17-f6d96e9bf15b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b32f7240-ddcc-4d08-864b-c131a4f5778a" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="42b9d812-9441-4022-9d7b-53fa2f3142c3" name="Socket" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="408394d9-32b4-4e8d-829d-26fc164830da" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="df7ed79c-282b-4798-9366-aa8b9e9eeaa7" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="47130367-8288-4762-81c4-e821de2ae661" name="Overclock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9fc61926-b360-46cd-b1c9-1f375de751d0" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="649d9791-bfe1-490d-b903-072bd9bf7bed" direction="Return">
+                        <elementDefinition Id="64c87dfb-c3fb-495f-859f-94f89cd13d85" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="ac0bf4cc-21de-4b18-b48c-98769ce7c07d" LastKnownName="Float" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="970e49f6-839b-4ca3-a9a5-b1a4105c18c4" name="HeatUp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cbb90b1c-7fa7-4882-812e-74c1ccce2427" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ac4ff6cf-f987-4358-b06f-1c7a31b3a185" direction="Return">
+                        <elementDefinition Id="ad0ceb59-e5d5-400c-a476-821ac93c5d81" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0118d938-e729-4463-a3cf-ea8f785314c6" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="8dabcb88-6978-4872-a29c-506f1eaa3a03" name="Motherboard" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="20bcf39a-a765-4444-bf08-1155cddf3910" />
+              <ownedAttributesInternal>
+                <property Id="07225d8c-93e2-4465-8146-9c92af52d1bf" name="Socket" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dc5f2047-b8a0-406d-8caf-11ba11dfb408" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5835df66-9740-41e1-a50c-dd32575a90cb" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1aadddfc-528a-4868-b2b6-d9ee0851a3b4" name="Chipset" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a74b2229-0155-4c2e-9220-a2bf224f02be" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="879e5b58-0d9a-4ab3-9fd8-46890a76b6a3" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="214ade60-cae6-42b6-83d1-6d042bdb5765" name="RAMSlots" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="60238c5b-27f6-4ecd-90d8-5318a88de8d7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5b504299-6df1-4306-ab05-dcaea6e6f65b" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="943902a6-0f2a-496f-b16d-1e22c2b23c2b" name="PCIESlots" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d05b55e6-e157-4194-9f01-b3b891778113" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9ef4449c-22e9-499e-9fe1-dbceb8bd64f8" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="2ae1f9a2-e6c0-46e5-9d4f-4248df24ee0f" name="ConsumePower" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="671a5943-c806-414d-8f0b-33fc09621723" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9b72b997-dde7-470d-8ae4-1c889768351e" direction="Return">
+                        <elementDefinition Id="5b8a6ac2-8396-4f3a-8bd1-818c134bc31f" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="b3919f2b-96ce-4666-9ecd-5f7915e99a7d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="0d86e02c-e88a-4e22-9802-ef82de3aa012" name="ConrtolCPUFan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="1d10c7c7-861d-4e49-9f23-a6887d25098a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1b69d404-81e3-4055-aa8d-5167ded7b828" direction="Return">
+                        <elementDefinition Id="f803bf78-8770-4855-b455-4b4798553f02" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="2e111aa9-b06b-4b6f-aa4f-2b1eb9ce9a08" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="27774c62-9927-4d09-9c87-768ce58c4617" name="RAM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3cc1788d-1769-474e-a742-6642e7d23d95" />
+              <ownedAttributesInternal>
+                <property Id="ab44606f-f6a6-4224-b12c-c29295437eee" name="Capacity" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="41b272fe-9f91-44db-9ac2-6e1f24d20924" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a433f8f-d56e-448d-bde9-059a554fd5e0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="732aa0e7-c0bf-45f2-8f26-37a92d4620ac" name="Frequency" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4828a97b-d73a-429b-b32a-fc97aa32aa94" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ef17c24-77b8-4c56-aea8-8283e743ad61" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="4efcc584-e12e-4ddf-a41a-d3ababec7624" name="Store" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ebd4bed9-e952-4dba-812f-34f58ebbcd20" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8af27f29-dd77-4dd9-b057-cf3cf1fa44f0" direction="Return">
+                        <elementDefinition Id="3312110a-a586-4c03-ae78-96aedf868fa2" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a8a0ff36-f3de-4802-a8dd-3f3896f6286f" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4bc1407d-d016-48cb-8982-9c39d132c373" name="Storage Drive" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6bb07680-4791-4a21-b512-334db221cb35" />
+              <ownedAttributesInternal>
+                <property Id="14710b96-d1f7-49f7-b1cc-2df9349b2290" name="Capacity" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ef632d74-5b5f-465b-a9f4-2e85070c7d7e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d228a6cb-a804-41de-a240-612dc0ef1a02" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="bfedf707-47b0-496b-9479-c9232932166d" name="RPM" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4621403e-2ec1-43fc-af29-29ef9b24e5ea" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a4288dd5-7e15-47e2-a2b5-d397d5be5b1f" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="226d8b07-b51c-4b4b-94db-a0c0575ff1f9" name="ReadSpeed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0bdf7b1b-3363-47fa-8dfe-3428e30de66c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ac4f492-b78c-4c91-b7e9-c4ae2fdba9a5" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="22223bdf-9f6c-44fc-bad7-5116445599a6" name="WriteSpeed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0abace79-ca43-4f31-baea-f093a02f23fb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f37d3eba-bae8-4432-bdeb-d9cf4954d67b" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="8c03a01a-5139-490f-b688-81612ba94581" name="Spin" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="90a538b7-a181-4eab-b07c-e946b45db5dc" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e521119e-4fc0-4774-a4e8-84ac3ae27d75" direction="Return">
+                        <elementDefinition Id="43b6f7c8-8380-4e35-a014-9c71b883fc8b" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="2031602d-6ecf-4512-b9aa-e9a1ccd8be7d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="6b3cfb6f-2b16-4930-9399-b7c9da7b90d7" name="Read" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f8a42924-475d-4c71-b221-a8b4c28a75db" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5eff6831-b35e-40d2-9edd-0c9a98d97a30" direction="Return">
+                        <elementDefinition Id="5f518b74-a65d-4d3d-b897-bf3d8d27043d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="01544623-650b-4f65-ae87-92c39ef9aa1b" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="99e09b0f-fab8-4d02-8fd2-5008d3f4bd75" name="Write" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="79596c1f-ed11-4e59-9294-f9020e8cbe94" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="03c3ec98-8ab3-4e67-9a20-7744438a93e1" direction="Return">
+                        <elementDefinition Id="07f00024-0266-45d1-8591-0ea89f277818" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="2cc0628e-410c-4f51-ae6e-e79632d635bb" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="92d25b16-6bb7-4555-aa80-7ee6001cfae8" name="Case" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b1558de2-4ba8-4ce6-ac47-e7cd19bd5c5e" />
+              <ownedAttributesInternal>
+                <property Id="44cbf819-63a2-4dc2-94f7-e809db3256df" name="FormFactor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0bfac1d6-873e-477f-8cf3-f3663e3f4bbe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d8c825a5-aa59-4419-a828-8a9a614c5c21" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="886f31e1-4df1-435c-94c0-c4c453f3946b" name="Stand" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9ebb1d34-9a85-47c1-94b6-b1598556957d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cadd5629-f198-4cb9-b4a6-69c902948a52" direction="Return">
+                        <elementDefinition Id="e4e4de38-faa1-43fe-b940-a61a7ea38ac2" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="b7d4c52d-8179-4e03-a54a-0f0be196dec8" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a0ab861a-5d81-4834-8303-a2912dac6e67" name="Desktop" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ef4d556b-1aec-427b-b893-1af3899c3da4" />
+              <suppliersInternal>
+                <interfaceRealization Id="3bd21ed5-2b3d-4ca2-a7ef-496ae1aa1754">
+                  <interfaceMoniker Id="c0611bc5-508b-478f-99de-a7ae85e3bdee" LastKnownName="Computer" />
+                  <elementDefinition Id="78475393-1d86-4f4f-982b-dcca64aec1b8" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="c274d7b4-d683-49e5-b497-56a1cb772a0e" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Case" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="92d25b16-6bb7-4555-aa80-7ee6001cfae8" LastKnownName="Case" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="cd240415-66df-4520-a4ae-f99146370885" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="f2161b3d-c0f9-4eb9-855d-57ba17465b41" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2c499c47-20f2-4824-80a4-0cf15305fb9d" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="000957c7-f681-48de-935c-8deb13729fad" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="60eb5b62-4cf1-4b9b-a85d-61e0fb14f3cc" />
+                </association>
+                <association Id="bcfc4339-d344-4e1f-a18b-5ba2fdfb586d" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Speakers" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="90b2e3c9-ce94-4ae4-a0d3-9ff0fe0d8494" LastKnownName="Speakers" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4c6f47e9-73e3-4519-97c7-eced430649ab" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="12342b88-254b-4cd1-a0c1-91538d5fda64" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="35450c9d-9958-4c9a-bd83-8188e3a8b2ee" name="Speakers" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="dda1f973-4a07-4319-800a-a52aa28a2993" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="43f72c2e-b17a-4f2c-a931-536e65e50534" />
+                </association>
+                <association Id="72abe71a-5e9b-4e15-bda9-f7fc66fb8557" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Headphones" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="ecbf3246-4c1a-4e49-97a0-e049c8f9b296" LastKnownName="Headphones" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="058682ed-368c-4bc6-84a6-5dca5a242aaa" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="36b63a76-dd3d-4334-9994-68799d8c024f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5d5e638c-f509-44c5-b55c-4a7c4d0da4b9" name="Headphones" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d3313e04-fcec-45a4-b0b2-0fb48864ae5b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="21aea824-a1bb-4b9b-a255-39ed30c3d5cb" />
+                </association>
+                <association Id="a6a1c88c-17ac-4eed-8f42-eba01d832199" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Mouse" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="51d40a8a-2ea4-4d58-a4d4-456c392410e6" LastKnownName="Mouse" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bab128c6-0e87-40c7-adfc-8b44f36368f7" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="ba0860e5-9d09-4388-9d53-97140dd80675" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="29ad1b20-90a9-42c1-8d13-2ebb46234047" name="Mouse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="c0e09658-707f-49ac-8d01-5ede3075a258" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6f714ed7-0371-4826-8b92-8f4a992ccca3" />
+                </association>
+                <association Id="d7b49de5-ee5c-4a60-ad4e-bf69a8a32fb6" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Keyboard" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="d498f501-44f5-4349-a8f4-0ecb42905a82" LastKnownName="Keyboard" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e52c8f51-5d4c-4f76-9ca5-409cd11842e4" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="be9eee69-b65e-4c2b-8080-6425f7be6a8d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a4d1f60c-8659-4bdc-b7fd-84735fc01a2f" name="Keyboard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="efe761d3-69cb-403a-a6f8-17349e9d5faa" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="93646f51-d2d3-4f25-b537-022c437e8727" />
+                </association>
+                <association Id="0063293e-7da0-474c-bf67-20f49687e237" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Display" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="40038d7d-8773-44ec-813a-e955aaa503ce" LastKnownName="Display" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7ff7b219-635f-44aa-967b-40007f04c316" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="75ab86d4-2d9b-4c72-96ca-f88d85e60b95" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e6834468-5624-4e9a-9658-d0e4e2303ea6" name="Display" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="7ebc51e1-8ace-4370-b586-c4fc25c89757" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="91d4cf9c-0701-49b7-b382-45ae6b29fc03" />
+                </association>
+                <association Id="0fa14833-9322-4d0a-b5fd-5a405227222c" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="CPU" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9d6b2579-ba7d-4f9b-9b7f-c70aaae1181c" LastKnownName="CPU" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a9510c70-da36-47c5-9666-52f3fcb91336" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="31dfd280-67f7-40d1-8296-909d64ee790c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="970e69ae-0435-4bab-bdcd-83f97bcfd7f5" name="CPU" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="b5b945df-c045-4e98-879f-e62958efebbb" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ce629a48-b475-4381-9e1e-609a474ac322" />
+                </association>
+                <association Id="28f50208-9a2e-4d42-8c9d-87e3e3297f76" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="RAM" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="27774c62-9927-4d09-9c87-768ce58c4617" LastKnownName="RAM" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ef8f3b1a-630d-4eeb-b4ec-6ab297953863" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="92f3903a-a5fa-4e25-80a8-89b0f57a56da" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6d12a147-a272-4177-a0fc-c8a6bce256f6" name="RAM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="61aa4e44-0ec1-4773-ac78-a6c765308f85" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ef27c312-e384-423d-ad74-008cc6c0b04a" />
+                </association>
+                <association Id="3498f8d7-279d-4a48-896a-4a9fe1741b17" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Motherboard" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="8dabcb88-6978-4872-a29c-506f1eaa3a03" LastKnownName="Motherboard" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d00de82e-1324-48a4-aeb2-8d2c96cab573" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d5cc8e75-fc4c-4ea3-b1a0-32c045b4e825" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4b2c8703-1496-47d3-8928-3b2069c12051" name="Motherboard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="bf90c46c-225c-4edd-a106-1d62598241ac" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="92b319be-d4dd-4e1e-bf2b-59aebae0d29b" />
+                </association>
+                <association Id="1a9ba1ec-96de-4985-b1eb-13b64d9e298b" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Storage Drive" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="4bc1407d-d016-48cb-8982-9c39d132c373" LastKnownName="Storage Drive" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4c16dc0e-8870-462e-88b8-7581c8946e10" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="b2977106-5e56-4e55-bbef-5e6c6b0e8938" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a2790313-ae4b-48c9-8037-a2f2dc7cc2c8" name="Storage Drive" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="62e24b06-25bb-46a2-af92-3a76eafaf857" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="fba7facd-e4db-4834-9655-e7b4a967a1a1" />
+                </association>
+                <association Id="9b23a2c6-2b4a-4600-8a24-d460daf8d2fc" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="Cooler" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="1be1d53b-a5e2-4f2a-ab8e-c0f3aa7d288b" LastKnownName="Cooler" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0fbd90b9-80ce-4f51-ad80-27a3a162c530" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8c02c96e-d0a2-4062-9074-b076af4bfa33" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4bbded0e-b5e9-4bfd-85f0-ac65293ccf55" name="Cooler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="a45a62d2-334f-4f4b-8481-79d010422b6e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="60a42d2d-8af5-4145-ab28-d99946919003" />
+                </association>
+                <association Id="0b45fada-64ec-44a9-b8f7-fe639b1a1931" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="GPU" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a355e2d2-676a-4670-aa5e-87099f5bcada" LastKnownName="GPU" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="04aa73be-8d84-43ad-937e-0ab4f27a8446" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="67389755-04ad-48bf-aee6-8d61a0bf4514" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b16c7d55-4739-4a0c-b573-52de6530a265" name="GPU" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="fb12ffb5-a52f-492c-898b-d9a814075d71" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a53b6cf4-4e65-4d75-98e4-fed9cc9594d2" />
+                </association>
+                <association Id="67d07071-6e72-41fe-88ad-15cb3e7b0fef" isDerived="false" sourceEndRoleName="Desktop" targetEndRoleName="PSU" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a37196f1-3839-4110-8d85-1a9bde3efe4b" LastKnownName="PSU" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c6f96e23-e99a-41d2-acb8-050d059c0718" name="Desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="0c701bc4-847a-4a57-ab69-ce9e6a2fc9d7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a8a0bb6b-99de-49a2-a7c3-7ee955831313" name="PSU" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="5b04e61a-bd7f-4d07-83f3-7bda202cdffa" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="802f3a55-7e84-4a9a-9d8b-441879283649" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="6814e0fe-46a3-4006-bd53-83de3f396252" name="CPU" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6bb225ae-a416-4bc4-a80d-854ca0fc3d54" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b603bb85-7108-4554-b8ef-8d914d857d77" LastKnownName="CPU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="48468e52-5a7b-4549-b5a5-0aca24ad1418" name="RAM" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="261c17d2-7bbd-4614-9226-913c016b0043" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f86d0a5f-fdec-4c67-a800-ffbd897cd6e5" LastKnownName="RAM" />
+                  </type_NamedElement>
+                </property>
+                <property Id="9f538d74-0f4c-409d-97d7-4ae3144155e1" name="Motherboard" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="09671834-6409-4244-96dd-2d7eeb9caa57" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ebae9a0a-b3ef-41af-961e-0b79760994ee" LastKnownName="Motherboard" />
+                  </type_NamedElement>
+                </property>
+                <property Id="9c65bac1-d770-4836-affb-da526ed333df" name="Drive" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02637971-ec4c-403b-8460-49fb5b48b23b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d2e3acd5-ca9a-44cc-b2c8-d34cf114036a" LastKnownName="Storage Drive" />
+                  </type_NamedElement>
+                </property>
+                <property Id="fc6e450a-8f5f-4f2b-ba55-b33297eb4af8" name="Cooler" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="38fcc372-2c9e-4a8b-95f7-31bf53d5c94f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fafebfba-b98f-42c3-857c-962b55efee84" LastKnownName="Cooler" />
+                  </type_NamedElement>
+                </property>
+                <property Id="bff74098-3af9-471e-94a2-bad825d8c373" name="GPU" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f04c1cb-cbd6-4d5a-a1cc-f25b9169b47a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="628cf57b-2653-47d8-abd4-2839eff16b31" LastKnownName="GPU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5d10b8db-e1b0-4c48-8946-f7f7b7e70778" name="PSU" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3413e58b-fff6-4a95-9c7f-c066970b1c73" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ad4136ac-1fb0-4826-8c9a-e9bf2d7dfeed" LastKnownName="PSU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7b663adc-bd72-4484-b6bc-311334006bd7" name="Display" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="43e6984a-c525-4676-8eb8-b4fa038c47ba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="43c51e9f-0dc7-47c4-8232-d0afdaba740a" LastKnownName="Display" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c66a8a0e-86ab-4b96-848a-f790a5925aa7" name="Speakers" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="293baf83-d43e-4018-8b54-0a650af6fff9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f9cd83eb-7a71-4c0a-be24-e182f9bf618c" LastKnownName="Speakers" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5c467a93-7c6b-40e5-93d1-04a8a78a0300" name="Mouse" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bfdb0128-3819-4463-8cf3-0d17fc7587f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="87b887d9-7fda-4302-bbf6-b6c414b9b659" LastKnownName="Mouse" />
+                  </type_NamedElement>
+                </property>
+                <property Id="b3b5151f-742d-44fc-afb2-b432fa00050e" name="Keyboard" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4eab029c-31c8-4a28-998b-86cb9b37add2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="eb66d923-bd97-4288-8dcb-a5cf022f9f96" LastKnownName="Keyboard" />
+                  </type_NamedElement>
+                </property>
+                <property Id="44cbde80-38cf-490d-abd2-4e6a5f66fa3d" name="Headphones" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3c37e7fa-3f04-4f2f-abdb-623c05db563a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64da4ae8-3769-412e-acf0-fd28e557cb1d" LastKnownName="Headphones" />
+                  </type_NamedElement>
+                </property>
+                <property Id="07db0bbd-2087-4ea4-a1f8-93cf641c2e98" name="Case" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="264fa793-b756-464a-ad76-f06fdea78c90" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a54b737b-d885-4671-8951-57591e16ecb5" LastKnownName="Case" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="0fa841d7-eb13-48ba-9619-a250a5c389da" name="PlayGames" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="43e9bd23-31cb-4507-b480-f2cad23b40ef" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="835df388-87a7-48fc-a579-936e1fa16370" direction="Return" isUnique="false">
+                        <elementDefinition Id="60ddb5d2-d2ae-4a19-8dcb-8e99258d5b1d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="dd71e3b2-42bf-4a39-9a9a-674c920eac85" name="WatchMovies" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2a84b579-57c8-4013-b70e-e11820e8940b" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="dc5cd83b-8a4c-47d2-ad87-e2f6742d13df" direction="Return" isUnique="false">
+                        <elementDefinition Id="a39a4ca1-e60c-4768-94f7-86863bd81e32" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="4155fede-209a-4a8c-a2eb-afff87112f94" name="BrowseInternet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="52c33c0f-97d5-4258-801f-2d409810cba7" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="a77389d6-3299-4a1b-82b9-43f64d363d64" direction="Return" isUnique="false">
+                        <elementDefinition Id="f289bfb4-2fc9-4e8a-a62c-b09b7727c0a3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="0c07d215-1e90-470a-bbaf-698b7327e10f" name="WatchMovie" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="1ac6fd14-d37b-4d7a-b30b-6f74c3ae8b23" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e4019d9a-13cc-4f42-9e43-e95e995b4a72" direction="Return" isUnique="false">
+                        <elementDefinition Id="58e8c44b-28a6-49a9-b808-b3828faac8e6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="062dfac4-fbc2-4e24-81c9-ded913b99dab" name="Laptop" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e173e900-7960-43b3-a72d-c6397bfe60a8" />
+              <suppliersInternal>
+                <interfaceRealization Id="b42192a0-9df2-47c3-9269-20ca79fe2dfd">
+                  <interfaceMoniker Id="c0611bc5-508b-478f-99de-a7ae85e3bdee" LastKnownName="Computer" />
+                  <elementDefinition Id="a05f0232-0ab3-456b-9227-cd8227933966" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="fe31f7d4-dbd3-44f0-a474-9e922ba97a1a" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="CPU" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9d6b2579-ba7d-4f9b-9b7f-c70aaae1181c" LastKnownName="CPU" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ea386718-42a4-4c9c-b608-9ec69cfff319" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="876c3333-bf12-4123-99a1-19b1cccde3c9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="30dd3ed1-3f0d-4ace-859f-d8d531b50e05" name="CPU" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="6d0666f7-3111-452c-a8e6-583273c65480" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6d2ef2e8-5d6c-4217-bcdc-e312b17b5d1a" />
+                </association>
+                <association Id="602f6464-f681-4938-a165-a50ac4952f92" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Motherboard" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="8dabcb88-6978-4872-a29c-506f1eaa3a03" LastKnownName="Motherboard" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7c0ebf4f-282f-4343-8b45-af9f7e8de44f" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="f41e2c21-cbaf-4f04-b15c-9b069ad0ca4d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bd701b02-8c31-4089-aa3f-f031746610ca" name="Motherboard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="c300edaa-8b29-4c17-b842-c6d96970bb29" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="d6b1a23a-e80f-47d9-bdd9-36cee2e6e063" />
+                </association>
+                <association Id="6e84d15c-47af-44db-8382-86de4c962a98" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Cooler" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="1be1d53b-a5e2-4f2a-ab8e-c0f3aa7d288b" LastKnownName="Cooler" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4799e612-91e2-4467-9ef6-a7c1ce3efbef" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7f522a64-a01b-4452-ab34-3dbe677c9d3b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="472bfe3d-720f-4e03-9360-0e11d93dcd95" name="Cooler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="a8ca9fe6-79cf-4ea2-88b7-9b02a1d8a3da" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="1a9dd81f-85fe-42e8-af46-1f7b2716d435" />
+                </association>
+                <association Id="ffc352d3-6353-4226-acf3-f4a80ebbf4c7" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="GPU" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a355e2d2-676a-4670-aa5e-87099f5bcada" LastKnownName="GPU" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e832e8c8-9fd4-4ec3-89f3-818e7b564254" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d9908306-f0c7-471a-80c9-82ee66cf751f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="59e1d5d3-a67b-4db5-a808-3b59b507e574" name="GPU" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <lowerValueInternal>
+                          <literalString Id="464055ba-4ef1-4359-a279-c3e341a95999" name="Lower" value="2">
+                            <elementDefinition Id="1449b583-ae5b-4094-9aec-6dda9550ba0a" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="e85ba3c5-a4f9-48fd-b15c-9d0eebbb0d14" name="Upper" value="2">
+                            <elementDefinition Id="50d89dca-2525-4e9b-8afe-98e87140dbbc" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="b477dd11-c708-45f8-b236-33aa8b064221" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="29ef3c86-61ce-4763-8806-794ff1b23e79" />
+                </association>
+                <association Id="fa4a4f7b-14d5-4eee-960f-54d956265cd0" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Display" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="40038d7d-8773-44ec-813a-e955aaa503ce" LastKnownName="Display" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="98394cf7-24ec-4608-8ab3-be156f2a6a1c" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="26aabadf-c204-4399-bf92-caede518f475" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b73feebd-77ef-435e-ba5b-48ee03427002" name="Display" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="c385a609-153c-486a-b32b-80009af755ac" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="db2b9559-f4df-45b2-aed1-ef0790b83e0c" />
+                </association>
+                <association Id="8cd065de-92c7-4098-ae41-53c3e7b6441a" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Speakers" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="90b2e3c9-ce94-4ae4-a0d3-9ff0fe0d8494" LastKnownName="Speakers" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="127177e3-b56c-4c3a-ac44-562c00c01011" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="eb5e4e21-ac4e-44b0-948a-758f75c0034b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2852fa41-b479-41de-ba3f-fdcbda67730b" name="Speakers" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="7e425b8b-04b5-4b30-bc78-2b5089826143" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a058f467-2093-4bab-849a-9d7fa7ccfb7c" />
+                </association>
+                <association Id="f1caadc8-98b8-4339-bc85-956b4cdaba93" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Headphones" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="ecbf3246-4c1a-4e49-97a0-e049c8f9b296" LastKnownName="Headphones" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ab83e62d-38c5-49ce-a67f-779e6832c9ec" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="b249511a-e6ce-4cb8-91c8-3d10910e8b25" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="75b92b41-3d2d-4239-bf13-4b2d9a7ecb73" name="Headphones" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="a9bf4f66-d824-48f7-97aa-de1211cf18ec" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="04c188c8-e9e9-4fde-8f5e-7dbb18c63f42" />
+                </association>
+                <association Id="f36bed5d-51ee-4ba8-ab1c-c81403781c72" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Mouse" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="51d40a8a-2ea4-4d58-a4d4-456c392410e6" LastKnownName="Mouse" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8168c2dd-8bc9-4f27-b3ba-3faf8ba0b341" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="93abd632-01b3-4fbe-af6f-0b271dde0948" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="fda7bc0c-65f7-4ca2-b13b-9e83e4000ca5" name="Mouse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="e1f46b12-faba-4a5d-b517-68bbb338c1bf" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="b2930152-07c4-4065-986b-6a16470731d9" />
+                </association>
+                <association Id="cb78bca2-2076-4ba0-b972-c7f27a28776c" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Keyboard" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="d498f501-44f5-4349-a8f4-0ecb42905a82" LastKnownName="Keyboard" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="680d3f80-a71b-490f-adaf-b3e92e4c1327" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="aa36335c-00ba-4d08-a8b2-d69130ac9248" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="307d27e0-c648-4856-b281-f61c06bc6242" name="Keyboard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="3bd88bd3-dace-4452-be5c-df9e9753c7f5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="b258ded2-6340-4054-ac92-205e4a087f5d" />
+                </association>
+                <association Id="a9f18f6c-b97c-4ab7-a83a-397e07f97aac" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="RAM" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="27774c62-9927-4d09-9c87-768ce58c4617" LastKnownName="RAM" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a839ce17-39b8-42da-8e11-59cfa5d23548" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="ec4b0fd7-f453-4984-921d-061ed3584334" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6d16f24b-e5a7-43ba-9bab-0d4abe211b93" name="RAM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="cbf75679-9479-4742-830d-1f78ee992676" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="51304afd-acdc-4a8e-8952-9717d06df2b1" />
+                </association>
+                <association Id="9f12d2b5-31f2-4fa5-b9fe-b5babafec805" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="Storage Drive" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="4bc1407d-d016-48cb-8982-9c39d132c373" LastKnownName="Storage Drive" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bcdb2c97-b92f-4f58-a1a6-ba6d9bc51a85" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="219a94f1-e895-47e1-b552-e6acac815220" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b4364fe4-91b3-4e55-884d-cbe8b6bda30c" name="Storage Drive" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="38b51f25-5e23-4cef-98d5-0f9722fc1c41" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="62a42ce7-144d-4060-9320-db2b879ff09e" />
+                </association>
+                <association Id="fcdee064-01ee-44bc-9eae-828a4ccaa8d0" isDerived="false" sourceEndRoleName="Laptop" targetEndRoleName="PSU" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a37196f1-3839-4110-8d85-1a9bde3efe4b" LastKnownName="PSU" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="83a802e4-e463-409c-8f02-dadba576be05" name="Laptop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="68a5532f-9c45-4517-9ebe-a51cb6cfb1b2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bfe5cbf7-4fa9-43db-bcee-46bbe41ef82c" name="PSU" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="a7b8d1c6-8aeb-45d3-8504-8ea95e4fa0a6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="db897ecc-a647-4645-aad4-80d7fbbd4d13" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="bbe2ec0f-a3d9-462f-afe4-db7954e93d26" name="CPU" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="75280000-d664-4ff6-9c90-2790c1dbe502" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b603bb85-7108-4554-b8ef-8d914d857d77" LastKnownName="CPU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ce9b465b-71f9-44d7-b55b-e0a0dd73b03b" name="RAM" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="42c24bd7-03c7-4e88-9de8-2dfa21cea42f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f86d0a5f-fdec-4c67-a800-ffbd897cd6e5" LastKnownName="RAM" />
+                  </type_NamedElement>
+                </property>
+                <property Id="b47cba46-1754-481c-b9f1-a2e91c8f7d7a" name="Motherboard" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="63443059-08d7-4568-b0bc-98148827951d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ebae9a0a-b3ef-41af-961e-0b79760994ee" LastKnownName="Motherboard" />
+                  </type_NamedElement>
+                </property>
+                <property Id="0bdedb77-4021-4ca0-9e31-32528b3ae796" name="PSU" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7cfd85f0-483e-4032-8368-7189ea743dbd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ad4136ac-1fb0-4826-8c9a-e9bf2d7dfeed" LastKnownName="PSU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1e2de5a4-bf9d-45cc-ac8d-11af55b27f25" name="GPU" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="35a27163-c346-4607-a98f-ed62332ccce3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="628cf57b-2653-47d8-abd4-2839eff16b31" LastKnownName="GPU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="6912eb59-ee23-412f-944c-c64b7ad6b514" name="Display" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="64204b63-a43e-4f18-9018-004778345a3f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="43c51e9f-0dc7-47c4-8232-d0afdaba740a" LastKnownName="Display" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5ea8e44e-667a-4858-9fe8-6120998d17bc" name="Speakers" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bdba936f-2401-4138-b267-35aaee08481f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f9cd83eb-7a71-4c0a-be24-e182f9bf618c" LastKnownName="Speakers" />
+                  </type_NamedElement>
+                </property>
+                <property Id="602be88e-8c48-4738-a812-089f060148b3" name="Headphones" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b7dfd57-64a1-46b9-8439-ff63ecac9da4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64da4ae8-3769-412e-acf0-fd28e557cb1d" LastKnownName="Headphones" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c3c5676e-4fff-4cff-b7ba-b641340073d5" name="Drive" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6378a8e3-7972-408e-a517-1afface733e0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d2e3acd5-ca9a-44cc-b2c8-d34cf114036a" LastKnownName="Storage Drive" />
+                  </type_NamedElement>
+                </property>
+                <property Id="65196d01-3297-4c80-97f1-1cb021dd5443" name="Keyboard" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="80e5dda6-030f-4480-b69f-b97f30fd6dff" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="eb66d923-bd97-4288-8dcb-a5cf022f9f96" LastKnownName="Keyboard" />
+                  </type_NamedElement>
+                </property>
+                <property Id="39cc56e4-9d66-42ef-bf13-8da71c697fb7" name="Trackpad" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d41e6eb-c263-4de4-b21f-8b569c59df75" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6098cb1-508b-4ce4-9faf-fabd28a0e9eb" LastKnownName="Mouse" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7f95b5e3-b01c-4fae-bd63-175b52ff3a31" name="Cooler" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e76555ff-4929-48ba-ae01-b140027d686a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f3eb5bc6-dd36-4547-b437-32c7d6425b37" LastKnownName="Cooler" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="c319262d-fb57-43a9-abf5-19bbf7b3ae3b" name="PlayGames" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="233bbb56-243f-4f01-b6a1-ec09298df596" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0f98157c-db99-4567-a15d-eb4533e528d8" direction="Return" isUnique="false">
+                        <elementDefinition Id="ac8fa876-c7b3-489c-b593-373f8d5de77e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c1b494d6-9eb5-435e-b68a-209c41787f50" name="BrowseInternet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cd3d0338-ecdd-40b4-bbfb-0bd102240adc" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="de3cd2b5-d42e-4e74-9dc9-6e8c593e8f1a" direction="Return" isUnique="false">
+                        <elementDefinition Id="14b9c4e0-84b0-47de-b597-bb4f27b3e9b3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="0b561bad-5c38-4385-aafc-0ff7644835d0" name="WatchMovies" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9d327568-729c-4678-b58c-8025e865fb64" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3ad44ef3-70b9-434c-8c2e-4f135e616665" direction="Return" isUnique="false">
+                        <elementDefinition Id="026157d0-dafe-414a-bb46-7f0d073d6dc4" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="267b81a4-c652-4029-ae52-57c80151a301" name="WatchMovie" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a321bdbd-fbc8-489e-b010-6110aa9dbc91" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="98bae30a-0e02-4cb3-b886-95b2f2b87b40" direction="Return" isUnique="false">
+                        <elementDefinition Id="e9095b9c-88d5-4dd9-a2ce-22de8001129a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="eff3554c-e30a-45dd-b124-c238c47a226d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1be1d53b-a5e2-4f2a-ab8e-c0f3aa7d288b" name="Cooler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c3d4f14d-2a91-4879-98c4-25fc57ab8473" />
+              <ownedAttributesInternal>
+                <property Id="eda2c85c-f63e-4152-9e52-9db38846ada3" name="Socket" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b2797441-72c2-4440-98d2-00a39d96dd0f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5bd2ac05-c31a-495d-8320-b03e9c8ff544" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="bf6671b2-0151-4fbf-aa3f-895a218ee1c3" name="TDP" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7b063271-1bca-458a-bd07-e140b4236766" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="db9a98e4-7f72-497d-b180-3de82a2d8787" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="78ca9629-edc2-4831-b92e-ba25f22d8b4f" name="Cool" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="64682267-8097-4953-937f-23b78ba5a795" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="30193ef4-dc89-4fde-919d-dad6ad5e4ebe" direction="Return">
+                        <elementDefinition Id="b0f149c6-68dc-4c53-9e09-b245dc8e21d9" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="cde6a490-6558-4e9f-9528-52ef227ea3ff" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="90b2e3c9-ce94-4ae4-a0d3-9ff0fe0d8494" name="Speakers" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="535d46d2-7a7c-4e2a-bfdb-b7dbdea67692" />
+              <ownedAttributesInternal>
+                <property Id="9fe31b02-737c-4b44-8048-f098d4669b4a" name="SystemType" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="405d4ef5-c2da-4dd6-b7b1-f37fd60f2804" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="36ffcacb-1b76-4c84-865c-9f9ffb80c828" LastKnownName="Float" />
+                  </type_NamedElement>
+                </property>
+                <property Id="6085c085-732e-4760-8fa0-a07f6ce7cfd9" name="MaxVolume" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25b9eb62-f2a5-4919-8c9d-27832849ad4b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8efb962e-7bb5-404c-a01d-87e4a70367af" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="463fd2a6-3724-439a-99ce-caf7281732d1" name="PlayMusic" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="039e8923-eca7-4d2c-b1ec-04b4fafc4159" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0ffb84b0-1ee9-4349-8bc1-21e0ec0e7599" direction="Return">
+                        <elementDefinition Id="73705eae-fe4c-49e2-b1d9-46c5e7f86be2" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="ecd602fc-d9e2-4834-a034-292a7252d01d" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="40038d7d-8773-44ec-813a-e955aaa503ce" name="Display" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="4e927f1b-031b-4069-8934-842e30cdab3c" />
+              <ownedAttributesInternal>
+                <property Id="5c182152-7412-4d93-a231-c3d18da1de99" name="Resolution" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="893d6b31-c50f-4bb3-8810-1c5d4b906556" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9f5a56d4-10b2-45fa-97f9-9523dd7da0c8" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="addac61f-2575-4cee-8153-5266e0f69be2" name="AspectRatio" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c2e70c26-082e-4e8f-b7c2-331e9549b85d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8d06ea5c-0a33-44a3-b6f2-f93b9cf3cd2a" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="5ee32be6-5b5a-4075-975d-97bad3b1e8be" name="ShowContent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a2ab304f-8b78-4ac6-b840-7d5aa29a54a4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1b1c38a4-3d45-46f0-94a8-dff15932774e" direction="Return">
+                        <elementDefinition Id="06ad4c22-b7dd-4049-9ebf-6f8f9369d3f3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5e432abe-8b58-4553-8eaf-b1e0328c019a" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a37196f1-3839-4110-8d85-1a9bde3efe4b" name="PSU" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="320a28d5-24e7-43a5-bc97-473f0b573cee" />
+              <ownedAttributesInternal>
+                <property Id="1f4277d7-6310-4bb3-9aaa-129d6201b88e" name="MaxPower" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="31726e3f-cf39-451b-b1d6-11b7c4ce16c6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bd8465ad-6553-481a-adea-a5ed3dc62b55" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="997f5b09-78e3-46f3-94a4-ea7036f2409b" name="PowerOtherComponents" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="41fecdd1-6522-463f-a4b4-78fa80843029" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="81d4ca6b-e322-4584-b9f4-a0502e3dfe3d" direction="Return">
+                        <elementDefinition Id="4cff9bd0-81e5-41f8-a7c3-5ca5650ba48c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f8f837a1-39c9-4c0c-bef3-d77dd39de8ba" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="ecbf3246-4c1a-4e49-97a0-e049c8f9b296" name="Headphones" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b8c3be33-3754-4d1b-bff8-89d9e39e4adf" />
+              <ownedAttributesInternal>
+                <property Id="2672dc3c-6bba-4aee-b15f-fc68a66dc103" name="Impendece" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a1d7e353-cad9-4f56-826a-783176edd9cb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bcda2dee-608a-41de-a9af-03f4023185a7" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="f60a62e2-c134-4208-bde3-b663996cd8f0" name="PlayMusic" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="84fa6a1f-8e40-4f94-94d2-f947c7f9a7f4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1fc618eb-1ed5-4d98-9bed-b6f1472f035d" direction="Return">
+                        <elementDefinition Id="a87645d9-782c-4076-ba03-59c94818edb1" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a9791ee0-42e4-4559-b2a7-5b6aa1d0ed39" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a355e2d2-676a-4670-aa5e-87099f5bcada" name="GPU" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f4b50f2c-15b9-4285-bb2c-91889fdea0c2" />
+              <ownedAttributesInternal>
+                <property Id="35d696cf-26fc-4e21-a195-b2f1bf40f899" name="VRAM" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9be5e345-f450-48e1-a10e-1dbd4ea58dcd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0a627962-6e22-4f6d-abc1-254ee1da35a3" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="a73a4ffa-38a7-4e63-903f-1fa36ea3cf7b" name="InterfaceWidth" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b15f89ce-2d30-4a4a-b4bd-2498245d7de9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4e59fdb3-617e-482d-a739-ca835c42011b" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="f1ae698d-a200-4561-96a6-64866cf3ecaf" name="Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0d58ed25-297d-4412-b852-ed750d2b75ab" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0d6d20b8-c3b1-4c42-a46d-cf1df9bc5614" direction="Return">
+                        <elementDefinition Id="b70c099d-da07-4237-8fcb-af5599b78fec" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="3e9bbe67-5e3b-4634-8c66-aba9143f6ca1" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="68171d32-5ab0-4d7e-9f8d-91330b3e77d3" name="Mining" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a1f91db7-a6ff-4ffc-b2eb-641f35995e32" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e3db44f4-a029-4a2c-a579-1146398abde1" direction="Return">
+                        <elementDefinition Id="aa76a636-3477-4603-8a2e-43810b013d16" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a7edb5f8-68be-4a91-8195-0f7fe65b86a4" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="c0611bc5-508b-478f-99de-a7ae85e3bdee" name="Computer" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="d324cdcf-fdb7-407b-baa7-8ac84c159217" />
+              <ownedAttributes>
+                <property Id="20cae225-ecfb-4d28-8fb4-034cf28a84b0" name="Drive" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="37dc294d-2e62-425b-af8c-696b2f9ac823" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="70a52304-271e-4015-851d-91da36d10840" LastKnownName="Storage Drive" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1bf79464-ff1e-432e-881d-2cf7fe7deadf" name="RAM" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18b497d3-b4c8-44e9-afca-2d048686e5c9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cedb9a57-0d07-44c8-bc58-f1f2fb73f4b7" LastKnownName="RAM" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f0f7ae56-185a-4e7e-b940-ecbc0e3b4771" name="PSU" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0be10268-3eaf-412b-9884-fce11d0fb64d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5f80d756-f984-4660-8cad-77c3fee6baab" LastKnownName="PSU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c86cf56e-31be-4cab-b96e-ebd577496521" name="Mouse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2186ce4c-8fa2-4563-a82f-09290f4accb1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="de5bf6a7-04ba-495b-8ed5-83984aea94bc" LastKnownName="Mouse" />
+                  </type_NamedElement>
+                </property>
+                <property Id="739f41dc-d744-420e-884b-4fe67094fb94" name="Motherboard" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a4bffd7d-8953-4c0a-99bc-4054cd3d2ae7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="562e64de-7b5f-470a-8366-2b7e5b8dcfdd" LastKnownName="Motherboard" />
+                  </type_NamedElement>
+                </property>
+                <property Id="29286d29-b77a-4590-a757-e9f91fb49900" name="Keyboard" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f8f11ded-e0d2-442e-9c0b-0f6f78929d56" />
+                </property>
+                <property Id="c50bf757-83a1-4943-8f32-8a0fb8f00deb" name="GPU" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="32080a66-b6fb-407b-af0a-3f92fd6bbdfc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="73a2bd3a-1c97-4f3e-9e7f-71c45af74222" LastKnownName="GPU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="dc47eacb-d551-4ff7-a976-633cdc19d78b" name="Display" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ec614cd-341c-43af-8fb8-c8a5cd2cec3a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b08080c7-f4cd-45bb-9092-c9c9a3b83e11" LastKnownName="Display" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2bf43173-568f-4efb-bcd3-f3b40acc6aaf" name="CPU" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0b407bae-72a9-47cd-97ae-f51f4f5ed4ab" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d67c2c58-8a9b-4009-a601-270dfe75fa25" LastKnownName="CPU" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f21b5f20-1304-42c5-94ce-b7e8b9363560" name="Cooler" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="280cda62-d6a7-4617-8fc0-f0d59ae16fb5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6a8c9aef-27c1-47f7-91d6-fb1729251838" LastKnownName="Cooler" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributes>
+              <ownedOperations>
+                <operation Id="4bfe0e82-6ec6-4284-b10a-4d0e37a67883" name="BrowseInternet" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f8d60a8b-df92-46fa-9e3d-fd186bc61fee" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="66008f6c-58d6-4bed-b7c3-954da6f08b08" direction="Return" isUnique="false">
+                        <elementDefinition Id="805a826a-2939-4f0c-bc1b-a92400061abd" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d632e086-ff24-423e-9668-6070704bfbb8" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d2d65b40-8629-401e-a372-05aa610593c1" name="PlayGames" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="58810099-8719-4575-a7b8-e1fa664d8768" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="80d4857c-0676-48f0-b1e1-b5993d30c6f2" direction="Return" isUnique="false">
+                        <elementDefinition Id="5366af7c-ab20-415f-b2a3-23afc24e03ca" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d632e086-ff24-423e-9668-6070704bfbb8" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c5f16622-8b40-4b87-b437-ac7c4986cf99" name="WatchMovie" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="fe99e081-28ff-4239-bddc-1b769c28c5b9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="00fa1e06-f5be-45a7-a36f-9d4470e8738a" direction="Return" isUnique="false">
+                        <elementDefinition Id="ebd0e5d4-2371-47ce-8428-b45b623c84bc" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d632e086-ff24-423e-9668-6070704bfbb8" LastKnownName="Void" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="9f11f9cb-1809-4cff-a351-33784f02c9d0" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9befc1aa-2f53-4423-8284-a49262d63ed2" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dbac2582-e5c5-49c4-b31c-19f99c9efa53" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bce2bffd-f1f4-4ab4-89dd-72d467967816" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="86b3e0ed-2c3b-49d9-9b5a-c638af7a302b" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="eff3554c-e30a-45dd-b124-c238c47a226d" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d8c825a5-aa59-4419-a828-8a9a614c5c21" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b7d4c52d-8179-4e03-a54a-0f0be196dec8" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="84093966-213f-45a9-9657-2b1e21e6bf1d" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Float">
+        <elementDefinition Id="e6f4ff04-9198-4917-ae8e-d1a12cd2fe1e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7890b7ef-dad7-4c99-822d-49cbb1dd9d3a" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Float">
+        <elementDefinition Id="e6f4ff04-9198-4917-ae8e-d1a12cd2fe1e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dd778965-ab87-46dc-898e-d524d0563b8b" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="df7ed79c-282b-4798-9366-aa8b9e9eeaa7" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b32f7240-ddcc-4d08-864b-c131a4f5778a" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="846211a3-272c-4fd2-81e9-f2c20a29e5ca" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0118d938-e729-4463-a3cf-ea8f785314c6" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ac0bf4cc-21de-4b18-b48c-98769ce7c07d" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Float">
+        <elementDefinition Id="e6f4ff04-9198-4917-ae8e-d1a12cd2fe1e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2a433f8f-d56e-448d-bde9-059a554fd5e0" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7ef17c24-77b8-4c56-aea8-8283e743ad61" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a8a0ff36-f3de-4802-a8dd-3f3896f6286f" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="879e5b58-0d9a-4ab3-9fd8-46890a76b6a3" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9ef4449c-22e9-499e-9fe1-dbceb8bd64f8" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5b504299-6df1-4306-ab05-dcaea6e6f65b" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5835df66-9740-41e1-a50c-dd32575a90cb" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2e111aa9-b06b-4b6f-aa4f-2b1eb9ce9a08" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b3919f2b-96ce-4666-9ecd-5f7915e99a7d" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d228a6cb-a804-41de-a240-612dc0ef1a02" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5ac4f492-b78c-4c91-b7e9-c4ae2fdba9a5" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a4288dd5-7e15-47e2-a2b5-d397d5be5b1f" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f37d3eba-bae8-4432-bdeb-d9cf4954d67b" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="01544623-650b-4f65-ae87-92c39ef9aa1b" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2031602d-6ecf-4512-b9aa-e9a1ccd8be7d" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2cc0628e-410c-4f51-ae6e-e79632d635bb" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5bd2ac05-c31a-495d-8320-b03e9c8ff544" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="db9a98e4-7f72-497d-b180-3de82a2d8787" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cde6a490-6558-4e9f-9528-52ef227ea3ff" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4e59fdb3-617e-482d-a739-ca835c42011b" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0a627962-6e22-4f6d-abc1-254ee1da35a3" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a7edb5f8-68be-4a91-8195-0f7fe65b86a4" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3e9bbe67-5e3b-4634-8c66-aba9143f6ca1" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8d06ea5c-0a33-44a3-b6f2-f93b9cf3cd2a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9f5a56d4-10b2-45fa-97f9-9523dd7da0c8" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5e432abe-8b58-4553-8eaf-b1e0328c019a" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bd8465ad-6553-481a-adea-a5ed3dc62b55" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f8f837a1-39c9-4c0c-bef3-d77dd39de8ba" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8efb962e-7bb5-404c-a01d-87e4a70367af" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="36ffcacb-1b76-4c84-865c-9f9ffb80c828" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Float">
+        <elementDefinition Id="e6f4ff04-9198-4917-ae8e-d1a12cd2fe1e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ecd602fc-d9e2-4834-a034-292a7252d01d" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bcda2dee-608a-41de-a9af-03f4023185a7" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a9791ee0-42e4-4559-b2a7-5b6aa1d0ed39" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b603bb85-7108-4554-b8ef-8d914d857d77" name="CPU" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::CPU">
+        <elementDefinition Id="41433b70-8ae2-46d3-b3bd-82fa7b4bc5bd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f86d0a5f-fdec-4c67-a800-ffbd897cd6e5" name="RAM" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::RAM">
+        <elementDefinition Id="3cc1788d-1769-474e-a742-6642e7d23d95" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ebae9a0a-b3ef-41af-961e-0b79760994ee" name="Motherboard" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Motherboard">
+        <elementDefinition Id="20bcf39a-a765-4444-bf08-1155cddf3910" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d2e3acd5-ca9a-44cc-b2c8-d34cf114036a" name="Storage Drive" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Storage Drive">
+        <elementDefinition Id="6bb07680-4791-4a21-b512-334db221cb35" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f3eb5bc6-dd36-4547-b437-32c7d6425b37" name="Cooler" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Cooler">
+        <elementDefinition Id="c3d4f14d-2a91-4879-98c4-25fc57ab8473" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="628cf57b-2653-47d8-abd4-2839eff16b31" name="GPU" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::GPU">
+        <elementDefinition Id="f4b50f2c-15b9-4285-bb2c-91889fdea0c2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ad4136ac-1fb0-4826-8c9a-e9bf2d7dfeed" name="PSU" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::PSU">
+        <elementDefinition Id="320a28d5-24e7-43a5-bc97-473f0b573cee" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="43c51e9f-0dc7-47c4-8232-d0afdaba740a" name="Display" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Display">
+        <elementDefinition Id="4e927f1b-031b-4069-8934-842e30cdab3c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f9cd83eb-7a71-4c0a-be24-e182f9bf618c" name="Speakers" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Speakers">
+        <elementDefinition Id="535d46d2-7a7c-4e2a-bfdb-b7dbdea67692" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="87b887d9-7fda-4302-bbf6-b6c414b9b659" name="Mouse" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Mouse">
+        <elementDefinition Id="0020c905-beda-441d-9892-233855ffae5c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="eb66d923-bd97-4288-8dcb-a5cf022f9f96" name="Keyboard" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Keyboard">
+        <elementDefinition Id="c31bf83e-5652-49dd-aa6e-36d8c230c331" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="64da4ae8-3769-412e-acf0-fd28e557cb1d" name="Headphones" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Headphones">
+        <elementDefinition Id="b8c3be33-3754-4d1b-bff8-89d9e39e4adf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f6098cb1-508b-4ce4-9faf-fabd28a0e9eb" name="Mouse" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Mouse">
+        <elementDefinition Id="0020c905-beda-441d-9892-233855ffae5c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a54b737b-d885-4671-8951-57591e16ecb5" name="Case" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Case">
+        <elementDefinition Id="b1558de2-4ba8-4ce6-ac47-e7cd19bd5c5e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fafebfba-b98f-42c3-857c-962b55efee84" name="Cooler" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Cooler">
+        <elementDefinition Id="c3d4f14d-2a91-4879-98c4-25fc57ab8473" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="70a52304-271e-4015-851d-91da36d10840" name="Storage Drive" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Storage Drive">
+        <elementDefinition Id="6bb07680-4791-4a21-b512-334db221cb35" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6a8c9aef-27c1-47f7-91d6-fb1729251838" name="Cooler" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Cooler">
+        <elementDefinition Id="c3d4f14d-2a91-4879-98c4-25fc57ab8473" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d67c2c58-8a9b-4009-a601-270dfe75fa25" name="CPU" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::CPU">
+        <elementDefinition Id="41433b70-8ae2-46d3-b3bd-82fa7b4bc5bd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b08080c7-f4cd-45bb-9092-c9c9a3b83e11" name="Display" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Display">
+        <elementDefinition Id="4e927f1b-031b-4069-8934-842e30cdab3c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="73a2bd3a-1c97-4f3e-9e7f-71c45af74222" name="GPU" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::GPU">
+        <elementDefinition Id="f4b50f2c-15b9-4285-bb2c-91889fdea0c2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="562e64de-7b5f-470a-8366-2b7e5b8dcfdd" name="Motherboard" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Motherboard">
+        <elementDefinition Id="20bcf39a-a765-4444-bf08-1155cddf3910" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="de5bf6a7-04ba-495b-8ed5-83984aea94bc" name="Mouse" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::Mouse">
+        <elementDefinition Id="0020c905-beda-441d-9892-233855ffae5c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5f80d756-f984-4660-8cad-77c3fee6baab" name="PSU" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::PSU">
+        <elementDefinition Id="320a28d5-24e7-43a5-bc97-473f0b573cee" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cedb9a57-0d07-44c8-bc58-f1f2fb73f4b7" name="RAM" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Warehouse::RAM">
+        <elementDefinition Id="3cc1788d-1769-474e-a742-6642e7d23d95" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d632e086-ff24-423e-9668-6070704bfbb8" name="Void" isAbstract="false" isLeaf="false" cachedFullName="Void">
+        <elementDefinition Id="f902e12a-3aff-4428-85c3-49e150cdac0a" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="d5eff10a-6e24-404a-bb9e-330e1c369c12" name="ModelingProject1">
+    <elementDefinition Id="ae7b8e0b-72c9-455a-98ff-e09257c3f65a" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a9fa9fa5-681a-4e10-823b-08d48a372c9f">
+        <profileInstance Id="d118eb79-d166-4fdd-8665-6be291a42070" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8fc7103f-6ede-4819-91da-05e7363d5b7f">
+        <profileInstance Id="ddbe20f8-9244-4614-8105-6b95ec9aa9ce" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

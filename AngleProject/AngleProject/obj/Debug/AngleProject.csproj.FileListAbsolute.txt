@@ -1,0 +1,6 @@
+C:\Users\dan.cociu\Source\Repos\Internship\AngleProject\AngleProject\bin\Debug\AngleProject.exe.config
+C:\Users\dan.cociu\Source\Repos\Internship\AngleProject\AngleProject\bin\Debug\AngleProject.exe
+C:\Users\dan.cociu\Source\Repos\Internship\AngleProject\AngleProject\bin\Debug\AngleProject.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\AngleProject\AngleProject\obj\Debug\AngleProject.csprojResolveAssemblyReference.cache
+C:\Users\dan.cociu\Source\Repos\Internship\AngleProject\AngleProject\obj\Debug\AngleProject.exe
+C:\Users\dan.cociu\Source\Repos\Internship\AngleProject\AngleProject\obj\Debug\AngleProject.pdb

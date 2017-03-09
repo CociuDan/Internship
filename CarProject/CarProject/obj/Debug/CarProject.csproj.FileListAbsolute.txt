@@ -1,0 +1,6 @@
+C:\Users\dan.cociu\Source\Repos\Internship\CarProject\CarProject\bin\Debug\CarProject.exe.config
+C:\Users\dan.cociu\Source\Repos\Internship\CarProject\CarProject\bin\Debug\CarProject.exe
+C:\Users\dan.cociu\Source\Repos\Internship\CarProject\CarProject\bin\Debug\CarProject.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\CarProject\CarProject\obj\Debug\CarProject.csprojResolveAssemblyReference.cache
+C:\Users\dan.cociu\Source\Repos\Internship\CarProject\CarProject\obj\Debug\CarProject.exe
+C:\Users\dan.cociu\Source\Repos\Internship\CarProject\CarProject\obj\Debug\CarProject.pdb

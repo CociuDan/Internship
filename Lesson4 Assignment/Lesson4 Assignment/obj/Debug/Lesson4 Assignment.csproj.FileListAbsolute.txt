@@ -1,0 +1,6 @@
+C:\Users\dan.cociu\Source\Repos\Internship\Lesson4 Assignment\Lesson4 Assignment\bin\Debug\Lesson4 Assignment.exe.config
+C:\Users\dan.cociu\Source\Repos\Internship\Lesson4 Assignment\Lesson4 Assignment\obj\Debug\Lesson4 Assignment.csprojResolveAssemblyReference.cache
+C:\Users\dan.cociu\Source\Repos\Internship\Lesson4 Assignment\Lesson4 Assignment\bin\Debug\Lesson4 Assignment.exe
+C:\Users\dan.cociu\Source\Repos\Internship\Lesson4 Assignment\Lesson4 Assignment\bin\Debug\Lesson4 Assignment.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\Lesson4 Assignment\Lesson4 Assignment\obj\Debug\Lesson4 Assignment.exe
+C:\Users\dan.cociu\Source\Repos\Internship\Lesson4 Assignment\Lesson4 Assignment\obj\Debug\Lesson4 Assignment.pdb
