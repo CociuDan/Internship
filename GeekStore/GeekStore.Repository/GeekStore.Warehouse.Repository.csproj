@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5346A4B1-FA03-432A-9717-3A0AFA3086AD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeekStore.Model</RootNamespace>
-    <AssemblyName>GeekStore.Model</AssemblyName>
+    <RootNamespace>GeekStore.Repository</RootNamespace>
+    <AssemblyName>GeekStore.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Interfaces\IStore.cs" />
+    <Compile Include="Implimentation\Warehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GeekStore.Repository\GeekStore.Warehouse.Repository.csproj">
-      <Project>{a79f14ba-8d95-4fa5-9af5-4b14b964508a}</Project>
-      <Name>GeekStore.Warehouse.Repository</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GeekStore.Warehouse.Model\GeekStore.Warehouse.Model.csproj">
       <Project>{a150b547-53be-44cf-8c91-07e5beaa2fe1}</Project>
       <Name>GeekStore.Warehouse.Model</Name>

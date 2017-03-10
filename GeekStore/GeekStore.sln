@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore", "GeekStore\GeekStore.csproj", "{5346A4B1-FA03-432A-9717-3A0AFA3086AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Warehouse.Repository", "GeekStore.Repository\GeekStore.Warehouse.Repository.csproj", "{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Warehouse.Model", "GeekStore.Warehouse.Model\GeekStore.Warehouse.Model.csproj", "{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5346A4B1-FA03-432A-9717-3A0AFA3086AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5346A4B1-FA03-432A-9717-3A0AFA3086AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5346A4B1-FA03-432A-9717-3A0AFA3086AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
