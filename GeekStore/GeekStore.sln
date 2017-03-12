@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore", "GeekStore\GeekStore.csproj", "{5346A4B1-FA03-432A-9717-3A0AFA3086AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Warehouse.Repository", "GeekStore.Repository\GeekStore.Warehouse.Repository.csproj", "{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Warehouse.Model", "GeekStore.Warehouse.Model\GeekStore.Warehouse.Model.csproj", "{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Factory", "GeekStore.Factory\GeekStore.Factory.csproj", "{D5D18656-5869-4CE1-89CA-3815F94A0474}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D18656-5869-4CE1-89CA-3815F94A0474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D18656-5869-4CE1-89CA-3815F94A0474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D18656-5869-4CE1-89CA-3815F94A0474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D18656-5869-4CE1-89CA-3815F94A0474}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

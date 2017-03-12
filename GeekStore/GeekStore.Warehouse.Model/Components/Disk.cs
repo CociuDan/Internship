@@ -16,7 +16,7 @@ namespace GeekStore.Warehouse.Model.Components
         private readonly int _rpm;
         private readonly int _writeSpeed;
 
-        public Disk(int capacity, DiskType diskType, string manufacturer, string model, double price, int quantity, int readSpeed, int rpm, int writeSpeed)
+        public Disk(int capacity, DiskType diskType, string manufacturer, string model, double price, int readSpeed, int rpm, int writeSpeed)
         {
             try
             {
@@ -31,9 +31,6 @@ namespace GeekStore.Warehouse.Model.Components
 
                 if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-
-                if (quantity <= 0)
-                    throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
 
                 if (readSpeed <= 0)
                     throw new ArgumentException("Disk Read Speed cannot be less or equal to 0. Entered value: " + readSpeed.ToString());
@@ -51,11 +48,11 @@ namespace GeekStore.Warehouse.Model.Components
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
-                _quantity = quantity;
                 _readSpeed = readSpeed;
                 _rpm = rpm;
                 _diskType = diskType.ToString();
                 _writeSpeed = writeSpeed;
+                AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
             {
@@ -107,16 +104,22 @@ namespace GeekStore.Warehouse.Model.Components
 
         public void AddToWarehouse(int incomingQuantity)
         {
+            if (incomingQuantity <= 0)
+                throw new ArgumentException("You cannot add less than one item to warehouse. Enterd value: " + incomingQuantity.ToString());
             _quantity += incomingQuantity;
         }
 
         public void SellQuantity(int sellingQuantity)
         {
+            if (sellingQuantity <= 0)
+                throw new ArgumentException("You cannot sell less than one item from warehouse. Enterd value: " + sellingQuantity.ToString());
             _quantity -= sellingQuantity;
         }
 
         public void ChangePrice(double newPrice)
         {
+            if (newPrice <= 0)
+                throw new ArgumentException("New Price cannot be less or equal to 0. Entered value: " + newPrice.ToString());
             _price = newPrice;
         }
     }

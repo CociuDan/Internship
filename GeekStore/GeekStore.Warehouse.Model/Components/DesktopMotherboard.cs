@@ -13,7 +13,7 @@ namespace GeekStore.Warehouse.Model.Components
         private int _quantity;
         private readonly string _socket;
 
-        public DesktopMotherboard(string chipset, string manufacturer, string model, int pcieSlots, double price, int quantity, int ramSlots, string socket)
+        public DesktopMotherboard(string chipset, string manufacturer, string model, int pcieSlots, double price, int ramSlots, string socket)
                            : base(ramSlots)
         {
             try
@@ -31,10 +31,7 @@ namespace GeekStore.Warehouse.Model.Components
                     throw new ArgumentException("Motherboard cannot have less than one PCI-E slot. Entered value: " + pcieSlots);
 
                 if (price <= 0)
-                    throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-
-                if (quantity <= 0)
-                    throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());                
+                    throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());          
 
                 if (string.IsNullOrEmpty(socket) || string.IsNullOrWhiteSpace(socket))
                     throw new ArgumentNullException(socket);
@@ -44,8 +41,8 @@ namespace GeekStore.Warehouse.Model.Components
                 _model = model;
                 _pcieSlots = pcieSlots;
                 _price = price;
-                _quantity = quantity;
                 _socket = socket;
+                AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
             {
@@ -92,16 +89,22 @@ namespace GeekStore.Warehouse.Model.Components
 
         public void AddToWarehouse(int incomingQuantity)
         {
+            if (incomingQuantity <= 0)
+                throw new ArgumentException("You cannot add less than one item to warehouse. Enterd value: " +  incomingQuantity.ToString());
             _quantity += incomingQuantity;
         }
 
         public void SellQuantity(int sellingQuantity)
         {
+            if (sellingQuantity <= 0)
+                throw new ArgumentException("You cannot sell less than one item from warehouse. Enterd value: " + sellingQuantity.ToString());
             _quantity -= sellingQuantity;
         }
 
         public void ChangePrice(double newPrice)
         {
+            if (newPrice <= 0)
+                throw new ArgumentException("New Price cannot be less or equal to 0. Entered value: " + newPrice.ToString());
             _price = newPrice;
         }
     }

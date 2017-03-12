@@ -19,25 +19,10 @@ namespace GeekStore.Warehouse.Model.PCs
         private readonly RAM _ram;
 
 
-        public Laptop(Battery battery, LaptopCPU cpu, LaptopDisplay display, Disk drive, LaptopGPU gpu, string manufacturer, string model, LaptopMotherboard motherboard, double price, int quantity, RAM ram)
+        public Laptop(Battery battery, LaptopCPU cpu, LaptopDisplay display, Disk drive, LaptopGPU gpu, string manufacturer, string model, LaptopMotherboard motherboard, double price, RAM ram)
         {
             try
             {
-                if (battery == null)
-                    throw new ArgumentNullException("battery");
-
-                if (cpu == null)
-                    throw new ArgumentNullException("cpu");
-
-                if (display == null)
-                    throw new ArgumentNullException("display");
-
-                if (drive == null)
-                    throw new ArgumentNullException("drive");
-
-                if (gpu == null)
-                    throw new ArgumentNullException("gpu");
-
                 if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
                     throw new ArgumentNullException("manufacturer");
 
@@ -47,23 +32,18 @@ namespace GeekStore.Warehouse.Model.PCs
                 if (price < 0)
                     throw new ArgumentException("Laptop price cannot be less than 0. Entered value: " + price);
 
-                if (quantity < 0)
-                    throw new ArgumentException("Laptop quantity cannot be less than 0. Entered value: " + quantity);
-
-                if (ram == null)
-                    throw new ArgumentNullException("ram");
-
-                _battery = battery;
-                _cpu = cpu;
-                _display = display;
-                _drive = drive;
-                _gpu = gpu;
+                _battery = battery ?? throw new ArgumentNullException("battery");
+                _cpu = cpu ?? throw new ArgumentNullException("cpu");
+                _display = display ?? throw new ArgumentNullException("display");
+                _drive = drive ?? throw new ArgumentNullException("drive");
+                _gpu = gpu ?? throw new ArgumentNullException("gpu");
                 _manufacturer = manufacturer;
                 _model = model;
-                _motherboard = motherboard;
+                _motherboard = motherboard ?? throw new ArgumentNullException("motherboard");
                 _price = price;
-                _quantity = quantity;
-                _ram = ram;
+                _ram = ram ?? throw new ArgumentNullException("ram");
+
+                AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
             {
@@ -119,16 +99,22 @@ namespace GeekStore.Warehouse.Model.PCs
 
         public void AddToWarehouse(int incomingQuantity)
         {
+            if (incomingQuantity <= 0)
+                throw new ArgumentException("You cannot add less than one item to warehouse. Enterd value: " + incomingQuantity.ToString());
             _quantity += incomingQuantity;
         }
 
         public void SellQuantity(int sellingQuantity)
         {
+            if (sellingQuantity <= 0)
+                throw new ArgumentException("You cannot sell less than one item from warehouse. Enterd value: " + sellingQuantity.ToString());
             _quantity -= sellingQuantity;
         }
 
         public void ChangePrice(double newPrice)
         {
+            if (newPrice <= 0)
+                throw new ArgumentException("New Price cannot be less or equal to 0. Entered value: " + newPrice.ToString());
             _price = newPrice;
         }
     }

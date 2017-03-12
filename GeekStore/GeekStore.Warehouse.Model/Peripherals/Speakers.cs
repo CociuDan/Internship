@@ -12,7 +12,7 @@ namespace GeekStore.Warehouse.Model.Peripherals
         private double _price;
         private int _quantity;
 
-        public Speakers(string configuration, string manufacturer, int maxVolume, string model, double price, int quantity)
+        public Speakers(string configuration, string manufacturer, int maxVolume, string model, double price)
         {
             try
             {
@@ -32,15 +32,13 @@ namespace GeekStore.Warehouse.Model.Peripherals
                 if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
 
-                if (quantity <= 0)
-                    throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-
                 _configuration = configuration;
                 _manufacturer = manufacturer;
                 _maxVolume = maxVolume;
                 _model = model;
                 _price = price;
-                _quantity = quantity;
+
+                AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
             {
@@ -84,16 +82,22 @@ namespace GeekStore.Warehouse.Model.Peripherals
 
         public void AddToWarehouse(int incomingQuantity)
         {
+            if (incomingQuantity <= 0)
+                throw new ArgumentException("You cannot add less than one item to warehouse. Enterd value: " + incomingQuantity.ToString());
             _quantity += incomingQuantity;
         }
 
         public void SellQuantity(int sellingQuantity)
         {
+            if (sellingQuantity <= 0)
+                throw new ArgumentException("You cannot sell less than one item from warehouse. Enterd value: " + sellingQuantity.ToString());
             _quantity -= sellingQuantity;
         }
 
         public void ChangePrice(double newPrice)
         {
+            if (newPrice <= 0)
+                throw new ArgumentException("New Price cannot be less or equal to 0. Entered value: " + newPrice.ToString());
             _price = newPrice;
         }
     }

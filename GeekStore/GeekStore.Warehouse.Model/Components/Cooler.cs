@@ -12,7 +12,7 @@ namespace GeekStore.Warehouse.Model.Components
         private readonly string _socket;
         private readonly int _maxTdp;
 
-        public Cooler(string manufacturer, string model, double price, int quantity, string socket, int maxTdp)
+        public Cooler(string manufacturer, string model, double price, string socket, int maxTdp)
         {
             try
             {
@@ -25,9 +25,6 @@ namespace GeekStore.Warehouse.Model.Components
                 if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
 
-                if (quantity <= 0)
-                    throw new ArgumentException("Quantity cannot be less or equal to 0. Entered value: " + quantity.ToString());
-
                 if (string.IsNullOrEmpty(socket) || string.IsNullOrWhiteSpace(socket))
                     throw new ArgumentNullException(socket);
 
@@ -37,9 +34,9 @@ namespace GeekStore.Warehouse.Model.Components
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
-                _quantity = quantity;
                 _socket = socket;
                 _maxTdp = maxTdp;
+                AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
             {
@@ -82,16 +79,22 @@ namespace GeekStore.Warehouse.Model.Components
 
         public void AddToWarehouse(int incomingQuantity)
         {
+            if (incomingQuantity <= 0)
+                throw new ArgumentException("You cannot add less than one item to warehouse. Enterd value: " + incomingQuantity.ToString());
             _quantity += incomingQuantity;
         }
 
         public void SellQuantity(int sellingQuantity)
         {
+            if (sellingQuantity <= 0)
+                throw new ArgumentException("You cannot sell less than one item from warehouse. Enterd value: " + sellingQuantity.ToString());
             _quantity -= sellingQuantity;
         }
 
         public void ChangePrice(double newPrice)
         {
+            if (newPrice <= 0)
+                throw new ArgumentException("New Price cannot be less or equal to 0. Entered value: " + newPrice.ToString());
             _price = newPrice;
         }
     }

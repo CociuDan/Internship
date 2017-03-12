@@ -17,27 +17,13 @@ namespace GeekStore.Warehouse.Model.PCs
         {
             try
             {
-                if (cooler == null)
-                    throw new ArgumentNullException("cooler");
-                if (cpu == null)
-                    throw new ArgumentNullException("cpu");
-                if (drive == null)
-                    throw new ArgumentNullException("drive");
-                if (gpu == null)
-                    throw new ArgumentNullException("gpu");
-                if (motherboard == null)
-                    throw new ArgumentNullException("motherboard");
-                if (psu == null)
-                    throw new ArgumentNullException("psu");
-                if (ram == null)
-                    throw new ArgumentNullException("ram");
-                Cooler = cooler;
-                _cpu = cpu;
-                _disk = drive;
-                _gpu = gpu;
-                _motherboard = motherboard;
-                _psu = psu;
-                _ram = ram;
+                Cooler = cooler ?? throw new ArgumentNullException("cooler");
+                _cpu = cpu ?? throw new ArgumentNullException("cpu");
+                _disk = drive ?? throw new ArgumentNullException("drive");
+                _gpu = gpu ?? throw new ArgumentNullException("gpu");
+                _motherboard = motherboard ?? throw new ArgumentNullException("motherboard");
+                _psu = psu ?? throw new ArgumentNullException("psu");
+                _ram = ram ?? throw new ArgumentNullException("ram");
             }
             catch (ArgumentNullException exception)
             {
