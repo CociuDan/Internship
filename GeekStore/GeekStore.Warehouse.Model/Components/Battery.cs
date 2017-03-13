@@ -1,4 +1,4 @@
-﻿namespace GeekStore.Warehouse.Model.Components
+﻿namespace GeekStore.Model.Components
 {
     public class Battery : PowerUnit
     {

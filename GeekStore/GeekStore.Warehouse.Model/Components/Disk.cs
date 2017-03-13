@@ -1,13 +1,15 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class Disk : IItem
     {
         public enum DiskType { HDD, SSD, SSHD }
         private readonly int _capacity;
         private readonly string _diskType;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private double _price;
@@ -45,6 +47,7 @@ namespace GeekStore.Warehouse.Model.Components
                     throw new ArgumentException("Disk Write Speed cannot be less or equal to 0. Entered value: " + writeSpeed.ToString());
 
                 _capacity = capacity;
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
@@ -52,6 +55,7 @@ namespace GeekStore.Warehouse.Model.Components
                 _rpm = rpm;
                 _diskType = diskType.ToString();
                 _writeSpeed = writeSpeed;
+
                 AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
@@ -85,6 +89,8 @@ namespace GeekStore.Warehouse.Model.Components
         }
 
         public int Capacity { get { return _capacity; } }
+
+        public int ID { get { return _id; } }
 
         public string Type { get { return _diskType; } }
 

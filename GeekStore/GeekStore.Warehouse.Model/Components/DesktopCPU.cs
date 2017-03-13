@@ -1,10 +1,12 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class DesktopCPU : CPU, IItem
     {
+        private readonly int _id;
         private double _price;
         private int _quantity;
         private string _socket;
@@ -20,8 +22,10 @@ namespace GeekStore.Warehouse.Model.Components
                 if (string.IsNullOrEmpty(socket) || string.IsNullOrWhiteSpace(socket))
                     throw new ArgumentNullException("socket");
 
+                _id = IDGenerator.NextID();
                 _price = price;
                 _socket = socket;
+
                 AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
@@ -54,6 +58,8 @@ namespace GeekStore.Warehouse.Model.Components
                 return sb.ToString();
             }
         }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return base.Manufacturer; } }
 

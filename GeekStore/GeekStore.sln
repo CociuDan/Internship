@@ -5,11 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore", "GeekStore\GeekStore.csproj", "{5346A4B1-FA03-432A-9717-3A0AFA3086AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Warehouse.Repository", "GeekStore.Repository\GeekStore.Warehouse.Repository.csproj", "{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Repository", "GeekStore.Repository\GeekStore.Repository.csproj", "{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Warehouse.Model", "GeekStore.Warehouse.Model\GeekStore.Warehouse.Model.csproj", "{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Model", "GeekStore.Warehouse.Model\GeekStore.Model.csproj", "{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Factory", "GeekStore.Factory\GeekStore.Factory.csproj", "{C05F60C8-6C41-4823-81C2-B7FB03B4B432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekStore.Service", "GeekStore.Service\GeekStore.Service.csproj", "{CDA41AE4-B738-4DDE-925D-DEF6EB2E0848}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C05F60C8-6C41-4823-81C2-B7FB03B4B432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C05F60C8-6C41-4823-81C2-B7FB03B4B432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C05F60C8-6C41-4823-81C2-B7FB03B4B432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA41AE4-B738-4DDE-925D-DEF6EB2E0848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA41AE4-B738-4DDE-925D-DEF6EB2E0848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA41AE4-B738-4DDE-925D-DEF6EB2E0848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA41AE4-B738-4DDE-925D-DEF6EB2E0848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

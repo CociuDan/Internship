@@ -2,12 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using GeekStore.Warehouse.Model.Components;
-using GeekStore.Warehouse.Model.ModelOperations;
-using GeekStore.Warehouse.Model.PCs;
-using GeekStore.Warehouse.Model.Peripherals;
-using GeekStore.Warehouse.Model;
-using GeekStore.Warehouse.Repository.Interfaces;
+using GeekStore.Model.Components;
+using GeekStore.Model.ModelOperations;
+using GeekStore.Model.PCs;
+using GeekStore.Model.Peripherals;
+using GeekStore.Model;
+using GeekStore.Factory;
+using GeekStore.Service.Interfaces;
+using GeekStore.Service.Implimentation;
 
 namespace GeekStore
 {
@@ -17,58 +19,25 @@ namespace GeekStore
         {
             //DebugFunction();
             //ReleaseFunction();
+            IGeekStoreService<IItem> _geekStore_Service = new GeekStoreService();
 
-            Case pcCase = new Case(Case.FormFactorTypes.MiniTower, "Deepcool", "Smarter", 30);
-            Cooler cooler = new Cooler("Deepcool", "Gammaxx 200", 22.5, "LGA1150, LGA1155, LGA1156, AM2, AM2+, AM3, AM3+", 100);
-            DesktopCPU cpu = new DesktopCPU(3.40, 3.80, CPU.CPUCores.QuadCore, "Intel", "i7 2600", 330, "LGA1155", 95, 8);
-            Monitor display = new Monitor("16:9", "ASUS", 165, "ROG Swift PG279Q", 500, "2560x1440");
-            Disk disk = new Disk(240, Disk.DiskType.SSD, "Crucial", "BX100", 70.0, 550, 0, 530);
-            DesktopGPU gpu = new DesktopGPU("Maxwell", 128, "MSI", "GDDR5", "750Ti OC", 110, 60, 2);
-            Keyboard keyboard = new Keyboard(true, "Corsair", "K70 RGB", 35.0, Keyboard.KeyboardType.Mechanical);
-            DesktopMotherboard motherboard = new DesktopMotherboard("Intel Q65 Express", "DELL", "0J3C2F", 2, 20.0, 4, "LGA1155");
-            Mouse mouse = new Mouse(2500, "Logitech", "G100S", 22.5, 1, Mouse.MouseType.Optical);
-            PSU psu = new PSU("Corsair", "CX500", 500, 33.0);
-            RAM ram = new RAM(4096, 1600, RAM.RAMGeneration.DDR3, "Corsair", "Vengeance", 17.5);
+            _geekStore_Service.StoreItem(CPUFactory.CreateDesktopCPU());
+            _geekStore_Service.StoreItem(ComputerFactory.CreateLaptop());            
+            _geekStore_Service.StoreItem(GPUFactory.CreateDesktopGPU());
 
-            List<IItem> components = new List<IItem>();
-            components.Add(pcCase);
-            components.Add(cooler);
-            components.Add(cpu);
-            components.Add(display);
-            components.Add(disk);
-            components.Add(gpu);
-            components.Add(keyboard);
-            components.Add(motherboard);
-            components.Add(mouse);
-            components.Add(psu);
-            components.Add(ram);
-
-            //foreach (IItem item in components)
-            //{
-            //    Console.WriteLine(item.Description);
-            //    Console.WriteLine("-------------------------------------------");
-            //}
-
-            //Console.ReadKey();
-
-            List<DesktopCPU> cpus = new List<DesktopCPU>();
-            cpus.Add(new DesktopCPU(3.40, 3.80, CPU.CPUCores.QuadCore, "Intel", "i7 2600", 330, "LGA1155", 95, 8));
-            cpus.Add(new DesktopCPU(4.20, 4.50, CPU.CPUCores.QuadCore, "Intel", "i7 7700k", 370, "LGA1151", 95, 8));
-            cpus.Add(new DesktopCPU(3.00, 3.50, CPU.CPUCores.DecaCore, "Intel", "i7 6590x", 1700, "LGA2011-v3", 140, 20));
-            cpus.Add(new DesktopCPU(3.00, 3.00, CPU.CPUCores.QuadCore, "Intel", "Xeon E5450", 20, "LGA771", 65, 4));
-            cpus.Sort(new CPUGamingComparer());
-            foreach(var ceva in cpus)
+            foreach(var item in _geekStore_Service.GetItems())
             {
-                Console.WriteLine(ceva.Description);
+                Console.WriteLine(item.Description);
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine(item.ID);
                 Console.WriteLine("-------------------------------------------");
             }
             Console.ReadKey();
-            //LaptopCPU noteCpu = new LaptopCPU(2.8, 3.8, CPU.CPUCores.QuadCore, "Intel", "i7 7700HQ", 35, 8);
-            //LaptopGPU noteGpu = new LaptopGPU(128, "nVidia", "GDDR5", "1050Ti", 4096);
-            //LaptopDisplay noteDisplay = new LaptopDisplay("16:9", 60, "1920x1080");
-            //Laptop notebook = new Laptop(noteCpu, noteDisplay, disk, noteGpu, "ASUS", "UX610", 500.0, 1, ram);
-            //Console.WriteLine(notebook.Description);
-            //Console.ReadKey();
+
+            IItem cevav = _geekStore_Service.GetItemByID(2);
+
+            Console.WriteLine(cevav.Description);
+            Console.ReadKey();
         }
 
         //[Conditional("Release")]

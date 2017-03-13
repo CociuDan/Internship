@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public abstract class CPU
     {

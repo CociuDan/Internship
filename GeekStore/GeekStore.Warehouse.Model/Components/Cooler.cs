@@ -1,10 +1,12 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class Cooler : IItem
     {
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private double _price;
@@ -31,11 +33,13 @@ namespace GeekStore.Warehouse.Model.Components
                 if (maxTdp <= 0)
                     throw new ArgumentException("MaxTDP is less or equal to 0. Entered value: " + maxTdp.ToString());
 
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
                 _socket = socket;
                 _maxTdp = maxTdp;
+
                 AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
@@ -64,6 +68,8 @@ namespace GeekStore.Warehouse.Model.Components
                 return sb.ToString();
             }
         }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

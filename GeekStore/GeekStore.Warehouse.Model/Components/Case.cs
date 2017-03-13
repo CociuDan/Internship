@@ -1,12 +1,14 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class Case : IItem
     {
         public enum FormFactorTypes { FullTower, MidTower, MiniTower, SFF, MicroATX, MiniITX }
         private readonly string _formFactor;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private double _price;
@@ -26,6 +28,7 @@ namespace GeekStore.Warehouse.Model.Components
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
 
                 _formFactor = formFactor.ToString();
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
@@ -58,6 +61,8 @@ namespace GeekStore.Warehouse.Model.Components
         }
 
         public string FormFactor { get { return _formFactor; } }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

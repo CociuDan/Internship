@@ -1,7 +1,8 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class RAM : IItem
     {
@@ -9,6 +10,7 @@ namespace GeekStore.Warehouse.Model.Components
         private readonly int _capacity;
         private readonly int _frequency;
         private readonly string _generation;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private double _price;
@@ -36,6 +38,7 @@ namespace GeekStore.Warehouse.Model.Components
                 _capacity = capacity;
                 _frequency = frequency;
                 _generation = generation.ToString();
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
@@ -74,6 +77,8 @@ namespace GeekStore.Warehouse.Model.Components
         public int Frequency { get { return _frequency; } }
 
         public string Generation { get { return _generation; } }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

@@ -1,11 +1,13 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class DesktopMotherboard : Motherboard, IItem
     {
         private readonly string _chipset;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private readonly int _pcieSlots;
@@ -37,6 +39,7 @@ namespace GeekStore.Warehouse.Model.Components
                     throw new ArgumentNullException(socket);
 
                 _chipset = chipset;
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _pcieSlots = pcieSlots;
@@ -74,6 +77,8 @@ namespace GeekStore.Warehouse.Model.Components
         }
 
         public string Chipset { get { return _chipset; } }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

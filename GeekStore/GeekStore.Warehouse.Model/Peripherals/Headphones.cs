@@ -1,11 +1,13 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Peripherals
+namespace GeekStore.Model.Peripherals
 {
     public class Headphones : IItem
     {
         public enum HeadphonesType { InEar, OnEar, OverEar}
+        private int _id;
         private int _impendance;
         private readonly string _manufacturer;
         private readonly int _maxVolume;
@@ -33,10 +35,12 @@ namespace GeekStore.Warehouse.Model.Peripherals
                 if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
 
+                _id = IDGenerator.NextID();
+                _impendance = impendance;
                 _manufacturer = manufacturer;
-                _maxVolume = maxVolume;
                 _model = model;
                 _price = price;
+                _type = type.ToString();
 
                 AddToWarehouse(1);
             }
@@ -52,12 +56,6 @@ namespace GeekStore.Warehouse.Model.Peripherals
             {
                 throw exception;
             }
-            _impendance = impendance;
-            _manufacturer = manufacturer;
-            _model = model;
-            _price = price;
-            _quantity = quantity;
-            _type = type.ToString();
         }
 
         public string Description
@@ -72,6 +70,8 @@ namespace GeekStore.Warehouse.Model.Peripherals
                 return sb.ToString();
             }
         }
+
+        public int ID { get { return _id; } }
 
         public int Impendance { get { return _impendance; } }
 

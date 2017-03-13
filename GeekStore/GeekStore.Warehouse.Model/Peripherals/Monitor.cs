@@ -1,18 +1,17 @@
-﻿using GeekStore.Warehouse.Model.Components;
+﻿using GeekStore.Model.Components;
+using GeekStore.Model.Infrastucture;
 using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Peripherals
+namespace GeekStore.Model.Peripherals
 {
     public class Monitor : Display, IItem
     {
-        private readonly string _aspectRatio;
+        private readonly int _id;
         private readonly string _manufacturer;
-        private readonly int _maxRefreshRate;
         private readonly string _model;
         private double _price;
         private int _quantity;
-        private readonly string _resolution;
 
         public Monitor(string aspectRatio, string manufacturer, int maxRefreshRate, string model, double price, string resolution)
                 : base(aspectRatio, maxRefreshRate, resolution)
@@ -27,10 +26,12 @@ namespace GeekStore.Warehouse.Model.Peripherals
 
                 if (price <= 0)
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
-                    
+
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
+
                 AddToWarehouse(1);
             }
             catch (ArgumentNullException exception)
@@ -54,12 +55,14 @@ namespace GeekStore.Warehouse.Model.Peripherals
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine($"\tManufacturer: {_manufacturer}");
                 sb.AppendLine($"\tModel: {_model}");
-                sb.AppendLine($"\tResolution: {_resolution}");
-                sb.AppendLine($"\tMax Refresh Rate: {_maxRefreshRate}Hz");
-                sb.AppendLine($"\tAspect Ratio: {_aspectRatio}");
+                sb.AppendLine($"\tResolution: {Resolution}");
+                sb.AppendLine($"\tMax Refresh Rate: {MaxRefreshRate}Hz");
+                sb.AppendLine($"\tAspect Ratio: {AspectRatio}");
                 return sb.ToString();
             }
         }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

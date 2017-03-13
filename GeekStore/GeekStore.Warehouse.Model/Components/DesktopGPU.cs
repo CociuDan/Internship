@@ -1,11 +1,13 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Components
+namespace GeekStore.Model.Components
 {
     public class DesktopGPU : GPU, IItem
     {
         private readonly string _architecture;
+        private readonly int _id;
         private double _price;
         private int _quantity;
         private readonly int _tdp;
@@ -25,6 +27,7 @@ namespace GeekStore.Warehouse.Model.Components
                     throw new ArgumentException("TDP cannot be less or equal to 0. Entered value: " + tdp.ToString());
 
                 _architecture = architecture;
+                _id = IDGenerator.NextID();
                 _price = price;
                 _tdp = tdp;
                 AddToWarehouse(1);
@@ -60,6 +63,8 @@ namespace GeekStore.Warehouse.Model.Components
         }
 
         public string Architecture { get { return _architecture; } }
+
+        public int ID { get { return _id; } }
 
         public double Price { get { return _price; } }
 

@@ -1,0 +1,5 @@
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore.Warehouse.Model\bin\Debug\GeekStore.Warehouse.Model.dll
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore.Warehouse.Model\bin\Debug\GeekStore.Warehouse.Model.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore.Warehouse.Model\obj\Debug\GeekStore.Warehouse.Model.dll
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore.Warehouse.Model\obj\Debug\GeekStore.Warehouse.Model.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore.Warehouse.Model\obj\Debug\GeekStore.Model.csprojResolveAssemblyReference.cache

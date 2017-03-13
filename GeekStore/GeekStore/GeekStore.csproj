@@ -50,13 +50,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GeekStore.Repository\GeekStore.Warehouse.Repository.csproj">
-      <Project>{a79f14ba-8d95-4fa5-9af5-4b14b964508a}</Project>
-      <Name>GeekStore.Warehouse.Repository</Name>
+    <ProjectReference Include="..\GeekStore.Factory\GeekStore.Factory.csproj">
+      <Project>{c05f60c8-6c41-4823-81c2-b7fb03b4b432}</Project>
+      <Name>GeekStore.Factory</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GeekStore.Warehouse.Model\GeekStore.Warehouse.Model.csproj">
+    <ProjectReference Include="..\GeekStore.Service\GeekStore.Service.csproj">
+      <Project>{cda41ae4-b738-4dde-925d-def6eb2e0848}</Project>
+      <Name>GeekStore.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeekStore.Warehouse.Model\GeekStore.Model.csproj">
       <Project>{a150b547-53be-44cf-8c91-07e5beaa2fe1}</Project>
-      <Name>GeekStore.Warehouse.Model</Name>
+      <Name>GeekStore.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

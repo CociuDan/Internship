@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A79F14BA-8D95-4FA5-9AF5-4B14B964508A}</ProjectGuid>
+    <ProjectGuid>{A150B547-53BE-44CF-8C91-07E5BEAA2FE1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeekStore.Repository</RootNamespace>
-    <AssemblyName>GeekStore.Repository</AssemblyName>
+    <RootNamespace>GeekStore.Warehouse.Model</RootNamespace>
+    <AssemblyName>GeekStore.Warehouse.Model</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,15 +41,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IStore.cs" />
-    <Compile Include="Implimentation\Warehouse.cs" />
+    <Compile Include="Components\Battery.cs" />
+    <Compile Include="Components\LaptopMotherboard.cs" />
+    <Compile Include="Components\Motherboard.cs" />
+    <Compile Include="Components\PowerUnit.cs" />
+    <Compile Include="Infrastucture\IDGenerator.cs" />
+    <Compile Include="Infrastucture\IIDGenerator.cs" />
+    <Compile Include="ModelOperations\CPUGamingComparer.cs" />
+    <Compile Include="ModelOperations\CPUWorkingComparer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GeekStore.Warehouse.Model\GeekStore.Warehouse.Model.csproj">
-      <Project>{a150b547-53be-44cf-8c91-07e5beaa2fe1}</Project>
-      <Name>GeekStore.Warehouse.Model</Name>
-    </ProjectReference>
+    <Compile Include="Components\Case.cs" />
+    <Compile Include="Components\Cooler.cs" />
+    <Compile Include="Components\CPU.cs" />
+    <Compile Include="Components\DesktopCPU.cs" />
+    <Compile Include="Components\DesktopGPU.cs" />
+    <Compile Include="Components\Disk.cs" />
+    <Compile Include="Components\Display.cs" />
+    <Compile Include="Components\GPU.cs" />
+    <Compile Include="Components\LaptopCPU.cs" />
+    <Compile Include="Components\LaptopDisplay.cs" />
+    <Compile Include="Components\LaptopGPU.cs" />
+    <Compile Include="Components\DesktopMotherboard.cs" />
+    <Compile Include="Components\PSU.cs" />
+    <Compile Include="Components\RAM.cs" />
+    <Compile Include="IItem.cs" />
+    <Compile Include="PCs\Desktop.cs" />
+    <Compile Include="PCs\IComputer.cs" />
+    <Compile Include="PCs\Laptop.cs" />
+    <Compile Include="Peripherals\Headphones.cs" />
+    <Compile Include="Peripherals\Keyboard.cs" />
+    <Compile Include="Peripherals\Monitor.cs" />
+    <Compile Include="Peripherals\Mouse.cs" />
+    <Compile Include="Peripherals\Speakers.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,7 @@
-﻿using GeekStore.Warehouse.Model.Components;
+﻿using GeekStore.Model.Components;
 using System.Collections.Generic;
 
-namespace GeekStore.Warehouse.Model.ModelOperations
+namespace GeekStore.Model.ModelOperations
 {
     public class CPUGamingComparer : Comparer<CPU>
     {

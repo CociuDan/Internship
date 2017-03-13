@@ -1,4 +1,3 @@
-C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.csprojResolveAssemblyReference.cache
 C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.exe.config
 C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.pdb
 C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.csprojResolveAssemblyReference.cache
@@ -8,9 +7,14 @@ C:\Users\cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.e
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Model.exe.config
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Model.exe
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Model.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Factory.dll
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Repository.dll
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Warehouse.Model.dll
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Factory.pdb
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Repository.pdb
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Warehouse.Model.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.csprojResolveAssemblyReference.cache
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.Model.exe
 C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\obj\Debug\GeekStore.Model.pdb
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Service.dll
+C:\Users\dan.cociu\Source\Repos\Internship\GeekStore\GeekStore\bin\Debug\GeekStore.Service.pdb

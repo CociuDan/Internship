@@ -1,12 +1,14 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Peripherals
+namespace GeekStore.Model.Peripherals
 {
     public class Keyboard : IItem
     {
         public enum KeyboardType { Membrane, Mechanical }
         private readonly bool _backLight;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private double _price;
@@ -27,6 +29,7 @@ namespace GeekStore.Warehouse.Model.Peripherals
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
 
                 _backLight = backLight;
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
                 _price = price;
@@ -62,6 +65,8 @@ namespace GeekStore.Warehouse.Model.Peripherals
         }
 
         public bool BackLight { get { return _backLight; } }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

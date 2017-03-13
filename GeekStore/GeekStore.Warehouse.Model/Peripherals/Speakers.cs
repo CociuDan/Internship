@@ -1,11 +1,13 @@
-﻿using System;
+﻿using GeekStore.Model.Infrastucture;
+using System;
 using System.Text;
 
-namespace GeekStore.Warehouse.Model.Peripherals
+namespace GeekStore.Model.Peripherals
 {
     public class Speakers : IItem
     {
         private readonly string _configuration;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly int _maxVolume;
         private readonly string _model;
@@ -33,6 +35,7 @@ namespace GeekStore.Warehouse.Model.Peripherals
                     throw new ArgumentException("Price cannot be less or equal to 0. Entered value: " + price.ToString());
 
                 _configuration = configuration;
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _maxVolume = maxVolume;
                 _model = model;
@@ -52,7 +55,6 @@ namespace GeekStore.Warehouse.Model.Peripherals
             {
                 throw exception;
             }
-
         }
 
         public string Description
@@ -69,6 +71,8 @@ namespace GeekStore.Warehouse.Model.Peripherals
         }
 
         public string Configuration { get { return _configuration; } }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 

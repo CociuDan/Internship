@@ -1,8 +1,9 @@
 ﻿using System.Text;
-using GeekStore.Warehouse.Model.Components;
+using GeekStore.Model.Components;
 using System;
+using GeekStore.Model.Infrastucture;
 
-namespace GeekStore.Warehouse.Model.PCs
+namespace GeekStore.Model.PCs
 {
     public class Laptop : IItem, IComputer
     {
@@ -10,6 +11,7 @@ namespace GeekStore.Warehouse.Model.PCs
         private readonly LaptopDisplay _display;
         private readonly Disk _drive;
         private readonly LaptopGPU _gpu;
+        private readonly int _id;
         private readonly string _manufacturer;
         private readonly string _model;
         private readonly LaptopMotherboard _motherboard;
@@ -23,25 +25,28 @@ namespace GeekStore.Warehouse.Model.PCs
         {
             try
             {
-                if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer))
-                    throw new ArgumentNullException("manufacturer");
+                if(battery == null) throw new ArgumentNullException("battery");
+                if(cpu == null) throw new ArgumentNullException("cpu");
+                if(display == null) throw new ArgumentNullException("display");
+                if(drive == null) throw new ArgumentNullException("drive");
+                if(gpu == null) throw new ArgumentNullException("gpu");
+                if (string.IsNullOrEmpty(manufacturer) || string.IsNullOrWhiteSpace(manufacturer)) throw new ArgumentNullException("manufacturer");
+                if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model)) throw new ArgumentNullException("model");
+                if(motherboard == null) throw new ArgumentNullException("motherboard");
+                if (price < 0) throw new ArgumentException("Laptop price cannot be less than 0. Entered value: " + price);
+                if(ram == null) throw new ArgumentNullException("ram");
 
-                if (string.IsNullOrEmpty(model) || string.IsNullOrWhiteSpace(model))
-                    throw new ArgumentNullException("model");
-
-                if (price < 0)
-                    throw new ArgumentException("Laptop price cannot be less than 0. Entered value: " + price);
-
-                _battery = battery ?? throw new ArgumentNullException("battery");
-                _cpu = cpu ?? throw new ArgumentNullException("cpu");
-                _display = display ?? throw new ArgumentNullException("display");
-                _drive = drive ?? throw new ArgumentNullException("drive");
-                _gpu = gpu ?? throw new ArgumentNullException("gpu");
+                _battery = battery;
+                _cpu = cpu;
+                _display = display;
+                _drive = drive;
+                _gpu = gpu;
+                _id = IDGenerator.NextID();
                 _manufacturer = manufacturer;
                 _model = model;
-                _motherboard = motherboard ?? throw new ArgumentNullException("motherboard");
+                _motherboard = motherboard;
                 _price = price;
-                _ram = ram ?? throw new ArgumentNullException("ram");
+                _ram = ram;
 
                 AddToWarehouse(1);
             }
@@ -64,13 +69,13 @@ namespace GeekStore.Warehouse.Model.PCs
             get
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine($"Manufacturer: {_manufacturer}");
-                sb.AppendLine($"Model: { _model} ");
-                sb.AppendLine($"CPU: {_cpu.ToString()}");
-                sb.AppendLine($"RAM: {_ram.Capacity}MB {_ram.Generation} {_ram.Frequency}Mhz");
-                sb.AppendLine($"GPU: {_gpu.ToString()}");
-                sb.AppendLine($"Drive: {_drive.Capacity} {_drive.Type}");
-                sb.AppendLine($"Display: {_display.AspectRatio} {_display.Resolution} @ {_display.MaxRefreshRate}Hz");
+                sb.AppendLine($"\tManufacturer: {_manufacturer}");
+                sb.AppendLine($"\tModel: { _model} ");
+                sb.AppendLine($"\tCPU: {_cpu.ToString()}");
+                sb.AppendLine($"\tRAM: {_ram.Capacity}MB {_ram.Generation} {_ram.Frequency}Mhz");
+                sb.AppendLine($"\tGPU: {_gpu.ToString()}");
+                sb.AppendLine($"\tDrive: {_drive.Capacity} {_drive.Type}");
+                sb.AppendLine($"\tDisplay: {_display.AspectRatio} {_display.Resolution} @ {_display.MaxRefreshRate}Hz");
                 return sb.ToString();
             }
         }
@@ -82,6 +87,8 @@ namespace GeekStore.Warehouse.Model.PCs
         public Disk Drive { get { return _drive; } }
 
         public GPU GPU { get { return _gpu; } }
+
+        public int ID { get { return _id; } }
 
         public string Manufacturer { get { return _manufacturer; } }
 
